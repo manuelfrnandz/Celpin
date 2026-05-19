@@ -38,7 +38,7 @@ export function Nav() {
             <img
               src="/images/celpin-logo-transparent.png"
               alt={SITE.siglas}
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
           </a>
 
