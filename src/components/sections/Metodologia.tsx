@@ -3,7 +3,6 @@ import { PILARES } from "../../data/pilares";
 import { SITE } from "../../data/site";
 import { Eyebrow } from "../ui/Eyebrow";
 import { PillarCard } from "../cards/PillarCard";
-import { PhotoPlaceholder } from "../ui/PhotoPlaceholder";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function Metodologia() {
@@ -43,7 +42,12 @@ export function Metodologia() {
         >
           {/* Photo */}
           <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0">
-            <PhotoPlaceholder label="fundador.png" className="w-full h-full" />
+            <img
+              src="/images/fundador.jpg"
+              alt={SITE.fundador.nombre}
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
           </div>
 
           {/* Quote + attribution */}

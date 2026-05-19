@@ -49,10 +49,20 @@ export function Deporte() {
           {/* Photos */}
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl overflow-hidden aspect-[3/4]">
-              <PhotoPlaceholder label="liga-grupo.png" className="w-full h-full" />
+              <img
+                src="/images/liga-grupo.jpg"
+                alt="Equipo de la Liga Deportiva CELPIN"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
             <div className="rounded-xl overflow-hidden aspect-[3/4]">
-              <PhotoPlaceholder label="liga-bus.png" className="w-full h-full" />
+              <img
+                src="/images/liga-bus.jpg"
+                alt="Estudiantes en excursión deportiva"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </motion.div>

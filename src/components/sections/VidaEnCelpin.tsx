@@ -3,11 +3,11 @@ import { Eyebrow } from "../ui/Eyebrow";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 const FOTOS = [
-  { src: "/images/inicial-2.png", alt: "Estudiantes en clase" },
-  { src: "/images/inicial-3.png", alt: "Actividad en CELPIN" },
-  { src: "/images/primaria-1.png", alt: "Lectura y aprendizaje" },
-  { src: "/images/primaria-2.png", alt: "Actividades primaria" },
-  { src: "/images/primaria-3.png", alt: "Día a día en CELPIN" },
+  { src: "/images/liga-grupo.jpg",          alt: "Liga Deportiva CELPIN — equipo completo" },
+  { src: "/images/liga-bus.jpg",            alt: "Estudiantes en excursión, emocionados en el bus" },
+  { src: "/images/prog-primaria.jpg",       alt: "Niños trabajando con marcadores en clase" },
+  { src: "/images/primaria-3.png",          alt: "Comunidad CELPIN en la feria de lectura" },
+  { src: "/images/prog-strukturas-foto.jpg", alt: "Acompañamiento personalizado con familia" },
 ];
 
 export function VidaEnCelpin() {

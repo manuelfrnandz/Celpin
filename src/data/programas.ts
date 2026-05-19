@@ -15,7 +15,7 @@ export const PROGRAMAS: Programa[] = [
     edad: "3–5 años",
     titulo: "Donde empieza el amor por aprender.",
     desc: "Estimulación temprana y desarrollo socioemocional en un entorno cálido. Pequeños grupos para gran atención individual.",
-    foto: "/images/inicial-1.png",
+    foto: "/images/prog-inicial.jpg",
   },
   {
     key: "primaria",
@@ -23,7 +23,7 @@ export const PROGRAMAS: Programa[] = [
     edad: "1° – 6° grado",
     titulo: "Bases académicas sólidas, con corazón.",
     desc: "Educación personalizada que fortalece las bases académicas y socioemocionales mediante metodologías activas, materiales concretos y estrategias Montessori y STEAM, respetando los ritmos de aprendizaje de cada estudiante.",
-    foto: "/images/primaria-3.png",
+    foto: "/images/prog-primaria.jpg",
   },
   {
     key: "secundaria",
@@ -31,7 +31,7 @@ export const PROGRAMAS: Programa[] = [
     edad: "1° – 6° media",
     titulo: "Líderes con criterio.",
     desc: "Metodología orientada al desarrollo de competencias académicas, pensamiento crítico y autonomía, integrando proyectos STEAM y la práctica deportiva como parte esencial del currículo.",
-    foto: "/images/inicial-3.png",
+    foto: "/images/prog-secundaria.jpg",
   },
   {
     key: "strukturas",
