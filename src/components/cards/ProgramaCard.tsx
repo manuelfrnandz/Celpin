@@ -20,10 +20,10 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
     return (
       <motion.div
         {...base}
-        className="bg-ink rounded-2xl overflow-hidden flex flex-col"
+        className="bg-white rounded-2xl shadow-card overflow-hidden flex flex-col"
       >
         {/* Logo area */}
-        <div className="aspect-[16/9] flex items-center justify-center relative bg-white/5">
+        <div className="aspect-[16/9] flex items-center justify-center relative bg-white">
           <img
             src="/images/strukturas-logo.png"
             alt="Strukturas"
@@ -36,19 +36,16 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
 
         {/* Content */}
         <div className="flex flex-col gap-3 p-6 xl:p-8 flex-1">
-          <div className="flex items-center gap-2">
-            <span className="font-mono text-eyebrow text-cream/40 tracking-[0.14em] uppercase">
-              {programa.tag}
-            </span>
-            <span className="text-cream/20">·</span>
-            <span className="font-mono text-eyebrow text-cream/40 tracking-[0.14em] uppercase">
+          <div className="flex items-center gap-2 flex-wrap">
+            <Pill>{programa.tag}</Pill>
+            <span className="font-mono text-eyebrow text-ink-muted tracking-[0.14em] uppercase">
               {programa.edad}
             </span>
           </div>
-          <h3 className="font-display font-semibold text-h3-card text-cream">
+          <h3 className="font-display font-semibold text-h3-card text-ink">
             {programa.titulo}
           </h3>
-          <p className="text-body text-cream/60 flex-1">{programa.desc}</p>
+          <p className="text-body text-ink-soft flex-1">{programa.desc}</p>
         </div>
       </motion.div>
     );
