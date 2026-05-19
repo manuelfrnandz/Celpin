@@ -95,8 +95,8 @@ export function Hero() {
             {/* Hero image — swap for liga-grupo.png when available */}
             <div className="rounded-2xl overflow-hidden aspect-[4/5]">
               <img
-                src="/images/inicial-1.png"
-                alt="Estudiantes en CELPIN"
+                src="/images/inicial-2.png"
+                alt="Maestra con estudiantes en CELPIN"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
