@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { DEPORTE } from "../../data/deporte";
 import { Eyebrow } from "../ui/Eyebrow";
-import { PhotoPlaceholder } from "../ui/PhotoPlaceholder";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function Deporte() {
@@ -104,8 +103,12 @@ export function Deporte() {
             transition={{ duration: 0.4, delay: 0.08 }}
             className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-5 items-start"
           >
-            <div className="w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden">
-              <PhotoPlaceholder className="w-full h-full" />
+            <div className="w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden bg-white flex items-center justify-center p-1.5">
+              <img
+                src="/images/okami-dojo-logo.png"
+                alt="Okami Dojo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h3 className="font-display font-semibold text-h3-card text-cream mb-2">
