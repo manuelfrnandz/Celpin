@@ -27,7 +27,7 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
           <img
             src="/images/strukturas-logo.png"
             alt="Strukturas"
-            className="h-16 w-auto object-contain"
+            className="w-[55%] max-w-[220px] h-auto object-contain"
           />
           <span className="absolute top-4 right-4 font-mono text-eyebrow tracking-[0.14em] uppercase text-green bg-green-tint px-3 py-1 rounded-full">
             Especializado
