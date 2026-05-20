@@ -22,7 +22,7 @@ export function VidaEnCelpin() {
           <Eyebrow number="05" label="Vida en CELPIN" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Una comunidad que{" "}
-            <em className="font-serif italic text-green">crece contigo.</em>
+            <em className="font-serif italic">crece contigo.</em>
           </h2>
           <p className="text-lead-lg text-ink-soft">
             El aprendizaje en CELPIN va más allá del salón de clases. La comunidad,

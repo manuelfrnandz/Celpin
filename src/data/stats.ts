@@ -8,7 +8,7 @@ export const STATS = [
   {
     value: "+8",
     suffix: "",
-    label: "promociones\negresadas",
+    label: "generaciones\nformadas",
     sublabel: "Desde 2007",
   },
   {

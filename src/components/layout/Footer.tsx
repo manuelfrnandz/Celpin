@@ -54,24 +54,30 @@ export function Footer() {
             </p>
             {/* Social links */}
             <div className="flex items-center gap-2.5">
-              <a
-                href={SITE.redes.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
-                aria-label="Instagram CELPIN"
-              >
-                <IgIcon />
-              </a>
-              <a
-                href={SITE.redes.instagramStrukturas}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
-                aria-label="Instagram Strukturas"
-              >
-                <IgIcon />
-              </a>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href={SITE.redes.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
+                  aria-label="Instagram CELPIN"
+                >
+                  <IgIcon />
+                </a>
+                <span className="font-mono text-[7px] tracking-[0.14em] uppercase text-cream/25 select-none">CELPIN</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href={SITE.redes.instagramStrukturas}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
+                  aria-label="Instagram Strukturas"
+                >
+                  <IgIcon />
+                </a>
+                <span className="font-mono text-[7px] tracking-[0.14em] uppercase text-cream/25 select-none">STRUKT.</span>
+              </div>
               <a
                 href={SITE.redes.youtube}
                 target="_blank"

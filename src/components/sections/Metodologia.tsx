@@ -17,7 +17,7 @@ export function Metodologia() {
           <Eyebrow number="03" label="Metodología" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Enseñamos diferente porque los niños{" "}
-            <em className="font-serif italic text-green">aprenden diferente.</em>
+            <em className="font-serif italic">aprenden diferente.</em>
           </h2>
           <p className="text-lead-lg text-ink-soft">
             Cuatro principios que guían cada decisión pedagógica en CELPIN,
@@ -55,7 +55,7 @@ export function Metodologia() {
             <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
               "{SITE.fundador.cita}"
             </blockquote>
-            <div className="h-px w-12 bg-green" />
+            <div className="h-px w-12 bg-border" />
             <div className="flex flex-col gap-1">
               <p className="font-display font-semibold text-h3-card text-ink">
                 {SITE.fundador.nombre}

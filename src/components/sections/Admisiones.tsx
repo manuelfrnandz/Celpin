@@ -207,7 +207,7 @@ export function Admisiones() {
           <Eyebrow number="07" label="Admisiones" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             El proceso es más{" "}
-            <em className="font-serif italic text-green">fácil de lo que crees.</em>
+            <em className="font-serif italic">fácil de lo que crees.</em>
           </h2>
           <p className="text-lead-lg text-ink-soft">
             Cuatro pasos para que tu hijo empiece el próximo año en CELPIN.

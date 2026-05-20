@@ -15,7 +15,7 @@ export function PillarCard({ pilar, index = 0 }: Props) {
       transition={{ duration: 0.4, delay: index * 0.08 }}
       className="bg-white rounded-2xl p-7 xl:p-8 flex flex-col gap-5 border border-border"
     >
-      <span className="font-display font-semibold text-[52px] leading-none text-green">
+      <span className="font-display font-semibold text-[52px] leading-none text-ink/10">
         {pilar.num}
       </span>
       <div>

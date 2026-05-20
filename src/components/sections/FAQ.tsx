@@ -23,7 +23,7 @@ export function FAQ() {
             <Eyebrow number="08" label="Preguntas frecuentes" className="mb-4" />
             <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink">
               Lo que{" "}
-              <em className="font-serif italic text-green">necesitas saber.</em>
+              <em className="font-serif italic">necesitas saber.</em>
             </h2>
           </div>
 

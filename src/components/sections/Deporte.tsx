@@ -34,7 +34,7 @@ export function Deporte() {
         >
           {/* Text */}
           <div className="flex flex-col gap-4 justify-center">
-            <p className="font-mono text-eyebrow text-green tracking-[0.14em] uppercase">
+            <p className="font-mono text-eyebrow text-cream/40 tracking-[0.14em] uppercase">
               {DEPORTE.liga.detalle}
             </p>
             <h3 className="font-display font-semibold text-h3-card text-cream">

@@ -85,7 +85,7 @@ export function Testimonios() {
             <Eyebrow number="06" label="Testimonios" onDark className="mb-4" />
             <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-cream mb-4">
               Lo que cuentan{" "}
-              <em className="font-serif italic text-green">las familias.</em>
+              <em className="font-serif italic">las familias.</em>
             </h2>
             <p className="text-lead-lg text-cream/60">
               Nada habla mejor de CELPIN que quienes lo viven. Estas son las

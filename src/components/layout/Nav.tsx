@@ -60,10 +60,6 @@ export function Nav() {
             <Button variant="secondary" size="sm" href="#admisiones">
               Agenda una visita
             </Button>
-            <Button variant="whatsapp" size="sm" href={WA_LINK} external>
-              <span className="w-2 h-2 rounded-full bg-white/60 flex-shrink-0" />
-              WhatsApp
-            </Button>
           </div>
 
           {/* Mobile hamburger */}

@@ -22,7 +22,7 @@ export function TrustStrip() {
               <p className="font-display font-semibold text-[56px] xl:text-[80px] leading-none text-cream tracking-tight">
                 {stat.value}
                 {stat.suffix && (
-                  <span className="text-green">{stat.suffix}</span>
+                  <span className="text-cream/40">{stat.suffix}</span>
                 )}
               </p>
 
