@@ -10,23 +10,23 @@ export interface Testimonio {
 export const TESTIMONIOS: Testimonio[] = [
   {
     id: "t1",
-    nombre: "TODO: nombre del testimonio 1",
-    relacion: "TODO: relación (ej: mamá de estudiante de 3er grado)",
-    videoFile: "/videos/testimonio-1.mp4",
+    nombre: "Marisol Mendoza",
+    relacion: "Mamá de estudiante CELPIN",
+    videoFile: "/videos/testimonio-marisol.mp4",
     thumbnail: "/images/placeholder.png",
   },
   {
     id: "t2",
-    nombre: "TODO: nombre del testimonio 2",
-    relacion: "TODO: relación",
-    videoFile: "/videos/testimonio-2.mp4",
+    nombre: "Belkys Grullón",
+    relacion: "Mamá de estudiante CELPIN",
+    videoFile: "/videos/testimonio-belkys.mp4",
     thumbnail: "/images/placeholder.png",
   },
   {
     id: "t3",
-    nombre: "TODO: nombre del testimonio 3",
-    relacion: "TODO: relación",
-    videoFile: "/videos/testimonio-3.mp4",
+    nombre: "Pamela Ciccone",
+    relacion: "Mamá de estudiante CELPIN",
+    videoFile: "/videos/testimonio-pamela.mp4",
     thumbnail: "/images/placeholder.png",
   },
 ];
