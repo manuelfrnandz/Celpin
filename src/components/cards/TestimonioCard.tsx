@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { type Testimonio } from "../../data/testimonios";
@@ -15,6 +16,9 @@ const safeRelacion = (relacion: string) =>
   relacion.startsWith("TODO") ? "Familia CELPIN" : relacion;
 
 export function TestimonioCard({ testimonio, index = 0, onPlay }: Props) {
+  const [frameReady, setFrameReady] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -28,20 +32,37 @@ export function TestimonioCard({ testimonio, index = 0, onPlay }: Props) {
       onKeyDown={(e) => e.key === "Enter" && onPlay()}
       aria-label={`Reproducir testimonio de ${safeName(testimonio.nombre, index)}`}
     >
-      {/* Video preview — first frame via seek */}
-      <div className="relative aspect-[9/16] overflow-hidden bg-ink-soft/30">
+      {/* Video — first frame used as thumbnail */}
+      <div className="relative aspect-[9/16] overflow-hidden bg-ink/60">
+        {/* Subtle pattern while frame loads */}
+        {!frameReady && (
+          <div className="absolute inset-0 flex items-end justify-start p-5 opacity-30">
+            <div className="w-8 h-0.5 bg-cream/40 rounded-full" />
+          </div>
+        )}
+
         <video
+          ref={videoRef}
           src={testimonio.videoFile}
           className="w-full h-full object-cover"
           preload="metadata"
           muted
           playsInline
-          onLoadedMetadata={(e) => {
-            e.currentTarget.currentTime = 0.1;
+          onLoadedMetadata={() => {
+            if (videoRef.current) videoRef.current.currentTime = 0.5;
           }}
+          onSeeked={() => setFrameReady(true)}
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-ink/40 group-hover:bg-ink/20 transition-colors duration-200" />
+
+        {/* Gradient overlay — lighter when frame is visible */}
+        <div
+          className={`absolute inset-0 transition-all duration-500 ${
+            frameReady
+              ? "bg-gradient-to-t from-ink/70 via-ink/10 to-transparent group-hover:from-ink/50"
+              : "bg-ink/60"
+          }`}
+        />
+
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
