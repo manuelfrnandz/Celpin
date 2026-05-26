@@ -12,10 +12,9 @@ const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURICompone
 )}`;
 
 const NIVELES = [
-  "Inicial (3–5 años)",
   "Primaria (1°–6° grado)",
   "Secundaria (1°–6° media)",
-  "Strukturas (apoyo especializado)",
+  "Strukturas (programa paralelo 0–8 años)",
   "No sé todavía",
 ];
 
@@ -160,7 +159,7 @@ function InfoCard() {
         </h3>
         <p className="text-body text-cream/60">
           Cupos limitados para el año escolar {SITE.admisiones.inicio}. El
-          proceso completo toma 2–3 semanas.
+          proceso completo toma menos de 2 semanas.
         </p>
       </div>
 

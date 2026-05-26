@@ -14,7 +14,7 @@ export function Programas() {
             <em className="font-serif italic text-green">cada etapa.</em>
           </h2>
           <p className="text-lead-lg text-ink-soft">
-            Desde inicial hasta bachillerato, con el mismo principio: cada
+            Desde primaria hasta bachillerato, con el mismo principio: cada
             estudiante importa y cada proceso de aprendizaje es único.
           </p>
         </div>
