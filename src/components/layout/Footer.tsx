@@ -1,5 +1,4 @@
-import { Phone, Mail, MapPin, FileDown } from "lucide-react";
-import { DOCUMENTOS } from "../../data/documentos";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 function IgIcon() {
   return (
