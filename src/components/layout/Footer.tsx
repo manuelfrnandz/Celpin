@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, FileText } from "lucide-react";
+import { Phone, Mail, MapPin, FileDown } from "lucide-react";
+import { DOCUMENTOS } from "../../data/documentos";
 
 function IgIcon() {
   return (
@@ -32,9 +33,6 @@ const NAV_LINKS = [
 
 const NIVELES = ["Primaria", "Secundaria", "Strukturas"];
 
-const DOCUMENTOS = [
-  { label: "Folleto informativo 2026–2027", href: "/docs/folleto-celpin-2026-2027.pdf" },
-];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -163,19 +161,38 @@ export function Footer() {
 
         {/* Documentos descargables */}
         <div id="documentos" className="mt-12 pt-8 border-t border-white/10">
-          <p className="font-mono text-eyebrow tracking-[0.18em] uppercase text-cream/30 mb-5">
+          <p className="font-mono text-eyebrow tracking-[0.18em] uppercase text-cream/30 mb-6">
             Documentos
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
             {DOCUMENTOS.map((doc) => (
               <a
                 key={doc.href}
                 href={doc.href}
                 download
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-body-sm text-cream/60 hover:text-cream hover:bg-white/10 transition-colors"
+                className="group flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
               >
-                <FileText size={14} strokeWidth={1.5} className="text-green flex-shrink-0" />
-                {doc.label}
+                {/* File type badge */}
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green/20 flex items-center justify-center">
+                  <span className="font-mono text-[9px] font-semibold tracking-wider text-green">
+                    {doc.tipo}
+                  </span>
+                </div>
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <p className="font-body text-body-sm font-medium text-cream leading-snug">
+                    {doc.titulo}
+                  </p>
+                  <p className="font-body text-[12px] text-cream/40 mt-0.5 leading-snug">
+                    {doc.descripcion}
+                  </p>
+                </div>
+                {/* Download icon */}
+                <FileDown
+                  size={16}
+                  strokeWidth={1.5}
+                  className="flex-shrink-0 text-cream/30 group-hover:text-green transition-colors mt-0.5"
+                />
               </a>
             ))}
           </div>
