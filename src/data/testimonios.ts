@@ -1,6 +1,5 @@
 export interface Testimonio {
   id: string;
-  // TODO: Víctor confirmar nombres y relación de cada video
   nombre: string;
   relacion: string;
   videoFile: string;  // archivo local en /videos/ o URL YouTube
@@ -11,21 +10,21 @@ export const TESTIMONIOS: Testimonio[] = [
   {
     id: "t1",
     nombre: "Marisol Mendoza",
-    relacion: "Mamá de estudiante CELPIN",
+    relacion: "Mamá de María Victoria Adrián Mendoza",
     videoFile: "/videos/testimonio-marisol.mp4",
     thumbnail: "/images/placeholder.png",
   },
   {
     id: "t2",
     nombre: "Belkys Grullón",
-    relacion: "Mamá de estudiante CELPIN",
+    relacion: "Mamá de Mia Marie y Joan Alejandro Torres Grullón",
     videoFile: "/videos/testimonio-belkys.mp4",
     thumbnail: "/images/placeholder.png",
   },
   {
     id: "t3",
     nombre: "Pamela Ciccone",
-    relacion: "Mamá de estudiante CELPIN",
+    relacion: "Mamá de Johnny Ricardo León Ciccone",
     videoFile: "/videos/testimonio-pamela.mp4",
     thumbnail: "/images/placeholder.png",
   },
