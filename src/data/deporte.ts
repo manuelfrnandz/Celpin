@@ -3,7 +3,7 @@ export const DEPORTE = {
     nombre: "Liga Deportiva Terapéutica",
     descripcion:
       "La Liga Deportiva Terapéutica de CELPIN concibe el deporte no solo como actividad física, sino como una herramienta pedagógica que fortalece el desarrollo emocional, social y conductual de nuestros estudiantes. A través de encuentros deportivos guiados, se promueven la disciplina, la autorregulación, el trabajo en equipo y la tolerancia a la frustración.",
-    detalle: "Activa desde 2001 · Viernes en el Mirador Sur",
+    detalle: "Activa desde 2001 · 2 viernes al mes en el Club San Gerónimo",
     fotos: ["/images/liga-grupo.png", "/images/liga-bus.png"],
   },
   wolves: {
@@ -15,7 +15,7 @@ export const DEPORTE = {
   okami: {
     nombre: "Okami Dojo by CELPIN",
     descripcion:
-      "Las artes marciales como herramienta educativa que promueve el autocontrol, la concentración, la perseverancia y el respeto. Su enfoque va más allá de lo físico, aportando estructura emocional y mental al proceso de aprendizaje.",
+      "Karate, Taekwondo y Judo como herramientas educativas que promueven el autocontrol, la concentración, la perseverancia y el respeto. Su enfoque va más allá de lo físico, aportando estructura emocional y mental al proceso de aprendizaje.",
     logo: "/images/okami-dojo-logo.png",
   },
 } as const;

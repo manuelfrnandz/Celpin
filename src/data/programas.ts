@@ -10,20 +10,12 @@ export interface Programa {
 
 export const PROGRAMAS: Programa[] = [
   {
-    key: "inicial",
-    tag: "Inicial",
-    edad: "3–5 años",
-    titulo: "Donde empieza el amor por aprender.",
-    desc: "Estimulación temprana y desarrollo socioemocional en un entorno cálido. Pequeños grupos para gran atención individual.",
-    foto: "/images/prog-inicial.jpg",
-  },
-  {
     key: "primaria",
     tag: "Primaria",
     edad: "1° – 6° grado",
     titulo: "Bases académicas sólidas, con corazón.",
     desc: "Educación personalizada que fortalece las bases académicas y socioemocionales mediante metodologías activas, materiales concretos y estrategias Montessori y STEAM, respetando los ritmos de aprendizaje de cada estudiante.",
-    foto: "/images/prog-primaria.jpg",
+    foto: "/images/prog-inicial.jpg",
   },
   {
     key: "secundaria",
@@ -31,16 +23,15 @@ export const PROGRAMAS: Programa[] = [
     edad: "1° – 6° media",
     titulo: "Líderes con criterio.",
     desc: "Metodología orientada al desarrollo de competencias académicas, pensamiento crítico y autonomía, integrando proyectos STEAM y la práctica deportiva como parte esencial del currículo.",
-    foto: "/images/prog-secundaria.jpg",
+    foto: "/images/prog-primaria.jpg",
   },
   {
     key: "strukturas",
     tag: "Strukturas",
-    edad: "Apoyo especializado",
+    edad: "0–8 años · Programa paralelo",
     titulo: "Educación adaptada a cómo aprende tu hijo.",
-    // TODO: Víctor confirmará el pitch oficial del programa
-    desc: "Programa especializado de acompañamiento educativo para estudiantes con perfiles de aprendizaje diversos. Terapeutas integrados, plan individual por estudiante y comunicación continua con la familia.",
-    foto: "/images/placeholder.png", // TODO: foto real Strukturas
+    desc: "Programa paralelo de vida práctica, terapia ocupacional y aprendizajes académicos para estudiantes de 0 a 8 años. Acompaña a quienes lo requieren con estructura emocional, sensorial y académica integrada en su día a día.",
+    foto: "/images/prog-strukturas-foto.jpg",
     featured: true,
   },
 ];

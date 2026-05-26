@@ -7,7 +7,7 @@ const FOTOS = [
   { src: "/images/primaria-2.png",           alt: "Actividad en el salón de primaria" },
   { src: "/images/inicial-1.png",            alt: "Niños de inicial en actividad creativa" },
   { src: "/images/primaria-3.png",           alt: "Comunidad CELPIN en la feria de lectura" },
-  { src: "/images/prog-strukturas-foto.jpg", alt: "Acompañamiento personalizado con familia" },
+  { src: "/images/prog-secundaria.jpg",      alt: "Estudiantes de secundaria en actividad" },
 ];
 
 export function VidaEnCelpin() {

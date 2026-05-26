@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, FileText } from "lucide-react";
 
 function IgIcon() {
   return (
@@ -30,7 +30,11 @@ const NAV_LINKS = [
   { label: "Preguntas frecuentes", href: "#faq" },
 ];
 
-const NIVELES = ["Inicial (3–5 años)", "Primaria", "Secundaria", "Strukturas"];
+const NIVELES = ["Primaria", "Secundaria", "Strukturas"];
+
+const DOCUMENTOS = [
+  { label: "Folleto informativo 2026–2027", href: "/docs/folleto-celpin-2026-2027.pdf" },
+];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -50,7 +54,7 @@ export function Footer() {
               className="h-10 w-auto object-contain object-left brightness-0 invert"
             />
             <p className="text-body text-cream/60 leading-relaxed max-w-xs">
-              Centro educativo privado en Santo Domingo, R.D. Educación personalizada desde inicial hasta bachillerato, desde 2007.
+              Centro educativo privado en Santo Domingo, R.D. Educación personalizada desde primaria hasta bachillerato, desde 2007.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-2.5">
@@ -157,8 +161,28 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Documentos descargables */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="font-mono text-eyebrow tracking-[0.18em] uppercase text-cream/30 mb-5">
+            Documentos
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {DOCUMENTOS.map((doc) => (
+              <a
+                key={doc.href}
+                href={doc.href}
+                download
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-body-sm text-cream/60 hover:text-cream hover:bg-white/10 transition-colors"
+              >
+                <FileText size={14} strokeWidth={1.5} className="text-green flex-shrink-0" />
+                {doc.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="font-body text-body-sm text-cream/30">
             © {year} {SITE.nombre}. Todos los derechos reservados.
           </p>

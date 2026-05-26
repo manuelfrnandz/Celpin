@@ -13,7 +13,7 @@ export const PILARES: Pilar[] = [
   {
     num: "02",
     titulo: "STEAM + Montessori",
-    desc: "Integramos ciencia, tecnología, ingeniería, arte y matemáticas con los principios Montessori. Aprendizaje activo, materiales concretos y exploración con propósito.",
+    desc: "Integramos ciencia, tecnología, ingeniería, arte y matemáticas con los principios Montessori. Aprendizaje activo, materiales concretos, exploración con propósito y adaptaciones curriculares personalizadas para cada estudiante.",
   },
   {
     num: "03",
