@@ -45,11 +45,10 @@ export function Hero() {
               {...anim(0.08)}
               className="font-display font-semibold text-h1-mobile xl:text-h1-hero text-ink"
             >
-              {SITE.headline}
-              <br />
-              <span className="font-serif italic text-green">
+              {SITE.headline}{" "}
+              <em className="font-serif italic text-green not-italic">
                 {SITE.headlineSub}
-              </span>
+              </em>
             </motion.h1>
 
             {/* Lead */}

@@ -162,7 +162,7 @@ export function Footer() {
         </div>
 
         {/* Documentos descargables */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div id="documentos" className="mt-12 pt-8 border-t border-white/10">
           <p className="font-mono text-eyebrow tracking-[0.18em] uppercase text-cream/30 mb-5">
             Documentos
           </p>

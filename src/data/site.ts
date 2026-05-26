@@ -5,8 +5,8 @@ export const SITE = {
   siglas: "CELPIN",
   lema: "Nosotros sí podemos",
   slogan: "Donde el Espíritu de la Creatividad No Encuentra Obstáculos",
-  headline: "La escuela que se adapta a tu hijo.",
-  headlineSub: "No al revés.",
+  headline: "El Centro que se adapta a tu hijo,",
+  headlineSub: "no al revés.",
   descripcion:
     `CELPIN es un centro educativo de educación personalizada, creado desde la convicción de que todo estudiante puede aprender y desarrollarse cuando recibe el acompañamiento adecuado. Creemos en el potencial único de cada niño y joven, y trabajamos de manera cercana sus procesos académicos, emocionales y sociales, respetando sus ritmos y necesidades. Nuestro lema, "Nosotros sí podemos", guía una educación humana y significativa, donde el error forma parte del aprendizaje.\n\nEn CELPIN construimos una comunidad educativa donde el espíritu de la creatividad no encuentra obstáculos y el crecimiento ocurre con confianza, respeto y propósito.`,
   admisiones: {

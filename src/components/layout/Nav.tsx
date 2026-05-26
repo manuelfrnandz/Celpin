@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { label: "Metodología", href: "#metodologia" },
   { label: "Deportes", href: "#deportes" },
   { label: "Admisiones", href: "#admisiones" },
+  { label: "Documentos", href: "#documentos" },
 ];
 
 const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURIComponent(
