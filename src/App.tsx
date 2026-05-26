@@ -11,6 +11,7 @@ import { VidaEnCelpin } from "./components/sections/VidaEnCelpin";
 import { Testimonios } from "./components/sections/Testimonios";
 import { Admisiones } from "./components/sections/Admisiones";
 import { FAQ } from "./components/sections/FAQ";
+import { Documentos } from "./components/sections/Documentos";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Testimonios />
         <Admisiones />
         <FAQ />
+        <Documentos />
       </main>
       <Footer />
       <StickyCTA />

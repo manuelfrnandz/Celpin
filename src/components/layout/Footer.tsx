@@ -159,45 +159,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Documentos descargables */}
-        <div id="documentos" className="mt-12 pt-8 border-t border-white/10">
-          <p className="font-mono text-eyebrow tracking-[0.18em] uppercase text-cream/30 mb-6">
-            Documentos
-          </p>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
-            {DOCUMENTOS.map((doc) => (
-              <a
-                key={doc.href}
-                href={doc.href}
-                download
-                className="group flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
-              >
-                {/* File type badge */}
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green/20 flex items-center justify-center">
-                  <span className="font-mono text-[9px] font-semibold tracking-wider text-green">
-                    {doc.tipo}
-                  </span>
-                </div>
-                {/* Info */}
-                <div className="flex-1 min-w-0">
-                  <p className="font-body text-body-sm font-medium text-cream leading-snug">
-                    {doc.titulo}
-                  </p>
-                  <p className="font-body text-[12px] text-cream/40 mt-0.5 leading-snug">
-                    {doc.descripcion}
-                  </p>
-                </div>
-                {/* Download icon */}
-                <FileDown
-                  size={16}
-                  strokeWidth={1.5}
-                  className="flex-shrink-0 text-cream/30 group-hover:text-green transition-colors mt-0.5"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="font-body text-body-sm text-cream/30">
