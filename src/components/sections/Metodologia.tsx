@@ -43,8 +43,8 @@ export function Metodologia() {
           {/* Photo */}
           <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0 bg-ink">
             <img
-              src="/images/fundador.jpg"
-              alt={SITE.fundador.nombre}
+              src={SITE.director.foto}
+              alt={SITE.director.nombre}
               className="w-full h-full object-cover object-top"
               loading="lazy"
             />
@@ -52,17 +52,22 @@ export function Metodologia() {
 
           {/* Quote + attribution */}
           <div className="flex flex-col gap-6">
-            {/* TODO: Víctor enviar su quote personal */}
+            {/* TODO: Víctor enviar su quote personal — cuando lo envíe, reemplazar el texto de abajo */}
             <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
               "{SITE.fundador.cita}"
             </blockquote>
             <div className="h-px w-12 bg-border" />
             <div className="flex flex-col gap-1">
-              <p className="font-display font-semibold text-h3-card text-ink">
-                {SITE.fundador.nombre}
-              </p>
+              <a
+                href={SITE.director.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display font-semibold text-h3-card text-ink hover:text-green-dark transition-colors"
+              >
+                {SITE.director.nombre}
+              </a>
               <p className="text-body-sm text-ink-muted">
-                {SITE.fundador.titulo}
+                {SITE.director.titulo}
               </p>
             </div>
           </div>

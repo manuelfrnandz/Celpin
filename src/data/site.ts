@@ -31,4 +31,12 @@ export const SITE = {
     cita: "Educar es ver al niño que está frente a ti, no al que esperabas.",
     foto: "/images/fundador.png",
   },
+  director: {
+    nombre: "Víctor A. Pérez-Objío, M.Ed.",
+    titulo: "Director General · CELPIN",
+    instagram: "https://www.instagram.com/victorperezobjio",
+    foto: "/images/victor-director.jpg",
+    // TODO: Víctor enviar su quote personal
+    cita: "",
+  },
 } as const;
