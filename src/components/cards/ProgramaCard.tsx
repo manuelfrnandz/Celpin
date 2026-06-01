@@ -23,15 +23,12 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
         className="bg-white rounded-2xl shadow-card overflow-hidden flex flex-col"
       >
         {/* Logo area */}
-        <div className="aspect-[16/9] flex items-center justify-center relative bg-white">
+        <div className="aspect-[16/9] flex items-center justify-center bg-white">
           <img
             src="/images/strukturas-logo.png"
             alt="Strukturas"
-            className="w-[72%] max-w-[300px] h-auto object-contain"
+            className="w-[85%] max-w-[360px] h-auto object-contain"
           />
-          <span className="absolute top-4 right-4 font-mono text-eyebrow tracking-[0.14em] uppercase text-green bg-green-tint px-3 py-1 rounded-full">
-            Especializado
-          </span>
         </div>
 
         {/* Content */}
