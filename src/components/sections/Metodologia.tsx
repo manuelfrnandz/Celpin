@@ -40,6 +40,41 @@ export function Metodologia() {
           transition={{ duration: 0.55 }}
           className="grid xl:grid-cols-[300px_1fr] gap-10 xl:gap-16 items-center border-t border-border pt-16 xl:pt-20"
         >
+          {/* Fundador photo */}
+          <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0 bg-ink">
+            <img
+              src={SITE.fundador.foto}
+              alt={SITE.fundador.nombre}
+              className="w-full h-full object-cover object-right"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Fundador quote + attribution */}
+          <div className="flex flex-col gap-6">
+            <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
+              "{SITE.fundador.cita}"
+            </blockquote>
+            <div className="h-px w-12 bg-border" />
+            <div className="flex flex-col gap-1">
+              <p className="font-display font-semibold text-h3-card text-ink">
+                {SITE.fundador.nombre}
+              </p>
+              <p className="text-body-sm text-ink-muted">
+                {SITE.fundador.titulo}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Director — Víctor A. Pérez-Objío */}
+        <motion.div
+          initial={reduced ? {} : { opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          className="grid xl:grid-cols-[300px_1fr] gap-10 xl:gap-16 items-center border-t border-border pt-16 xl:pt-20 mt-16 xl:mt-20"
+        >
           {/* Photo */}
           <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0 bg-ink">
             <img
@@ -52,9 +87,9 @@ export function Metodologia() {
 
           {/* Quote + attribution */}
           <div className="flex flex-col gap-6">
-            {/* TODO: Víctor enviar su quote personal — cuando lo envíe, reemplazar el texto de abajo */}
-            <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
-              "{SITE.fundador.cita}"
+            {/* TODO: Víctor enviar su quote — reemplazar el placeholder de abajo */}
+            <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink/40">
+              "Quote pendiente — Víctor lo compartirá pronto."
             </blockquote>
             <div className="h-px w-12 bg-border" />
             <div className="flex flex-col gap-1">
