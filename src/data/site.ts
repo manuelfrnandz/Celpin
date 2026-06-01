@@ -29,7 +29,7 @@ export const SITE = {
     nombre: "Dr. Pérez Hernández",
     titulo: "Psiquiatra Infanto-Juvenil y de Adultos · Fundador, 2007",
     cita: "Educar es ver al niño que está frente a ti, no al que esperabas.",
-    foto: "/images/fundador.png",
+    foto: "/images/fundador.webp",
   },
   director: {
     nombre: "Víctor A. Pérez-Objío, M.Ed.",
