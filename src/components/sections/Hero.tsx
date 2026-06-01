@@ -110,7 +110,7 @@ export function Hero() {
                 Ratio
               </p>
               <p className="font-display font-semibold text-h3-card text-ink leading-none">
-                1:7{" "}
+                1:5{" "}
                 <span className="text-body text-ink-soft font-body font-normal">
                   máx.
                 </span>

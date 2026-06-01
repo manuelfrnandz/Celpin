@@ -14,7 +14,7 @@ const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURICompone
 const NIVELES = [
   "Primaria (1°–6° grado)",
   "Secundaria (1°–6° media)",
-  "Strukturas (programa paralelo 0–8 años)",
+  "Strukturas (Programa Especializado)",
   "No sé todavía",
 ];
 
@@ -82,7 +82,7 @@ function ContactForm() {
           Solicita información
         </h3>
         <p className="text-body-sm text-ink-muted">
-          Te respondemos en menos de 24 horas por WhatsApp.
+          Respondemos de 8:00 AM a 5:00 PM por WhatsApp.
         </p>
       </div>
 

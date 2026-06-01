@@ -7,12 +7,6 @@ export interface Documento {
 
 export const DOCUMENTOS: Documento[] = [
   {
-    titulo: "Folleto informativo 2026–2027",
-    descripcion: "Programas, metodología, admisiones y vida en CELPIN.",
-    href: "/docs/folleto-celpin-2026-2027.pdf",
-    tipo: "PDF",
-  },
-  {
     titulo: "Requisitos de inscripción 2026–2027",
     descripcion: "Lista completa de documentos requeridos para formalizar la inscripción.",
     href: "/docs/requisitos-inscripcion-2026-2027.pdf",

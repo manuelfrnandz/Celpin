@@ -27,7 +27,7 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
           <img
             src="/images/strukturas-logo.png"
             alt="Strukturas"
-            className="w-[55%] max-w-[220px] h-auto object-contain"
+            className="w-[72%] max-w-[300px] h-auto object-contain"
           />
           <span className="absolute top-4 right-4 font-mono text-eyebrow tracking-[0.14em] uppercase text-green bg-green-tint px-3 py-1 rounded-full">
             Especializado
@@ -38,7 +38,7 @@ export function ProgramaCard({ programa, index = 0 }: Props) {
         <div className="flex flex-col gap-3 p-6 xl:p-8 flex-1">
           <div className="flex items-center gap-2 flex-wrap">
             <Pill>{programa.tag}</Pill>
-            <span className="font-mono text-eyebrow text-ink-muted tracking-[0.14em] uppercase">
+            <span className="font-mono text-eyebrow text-green-dark tracking-[0.14em] uppercase">
               {programa.edad}
             </span>
           </div>

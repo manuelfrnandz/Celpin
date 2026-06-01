@@ -18,7 +18,7 @@ export const PILARES: Pilar[] = [
   {
     num: "03",
     titulo: "Familia integrada",
-    desc: "La educación comienza en el hogar. Trabajamos en estrecha comunicación con cada familia para construir un proceso coherente entre casa y colegio.",
+    desc: "La educación comienza en el hogar. Trabajamos en estrecha comunicación con cada familia para construir un proceso coherente entre casa y centro.",
   },
   {
     num: "04",

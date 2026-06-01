@@ -6,10 +6,10 @@ export const STATS = [
     sublabel: "Desde 2007",
   },
   {
-    value: "+8",
+    value: "8",
     suffix: "",
     label: "generaciones\nformadas",
-    sublabel: "Desde 2007",
+    sublabel: "Desde 2019",
   },
   {
     value: "96",
@@ -18,9 +18,9 @@ export const STATS = [
     sublabel: "Estadística interna 2024",
   },
   {
-    value: "1:7",
+    value: "1:5",
     suffix: "",
     label: "ratio docente-\nestudiante",
-    sublabel: "Hasta 1:5 en primaria",
+    sublabel: "Hasta 1:7 en secundaria",
   },
 ] as const;

@@ -41,7 +41,7 @@ export function Metodologia() {
           className="grid xl:grid-cols-[300px_1fr] gap-10 xl:gap-16 items-center border-t border-border pt-16 xl:pt-20"
         >
           {/* Photo */}
-          <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0">
+          <div className="w-full max-w-[260px] mx-auto xl:mx-0 xl:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden flex-shrink-0 bg-ink">
             <img
               src="/images/fundador.jpg"
               alt={SITE.fundador.nombre}
@@ -52,6 +52,7 @@ export function Metodologia() {
 
           {/* Quote + attribution */}
           <div className="flex flex-col gap-6">
+            {/* TODO: Víctor enviar su quote personal */}
             <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
               "{SITE.fundador.cita}"
             </blockquote>

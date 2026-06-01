@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { DEPORTE } from "../../data/deporte";
 import { Eyebrow } from "../ui/Eyebrow";
@@ -5,6 +6,14 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function Deporte() {
   const reduced = useReducedMotion();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
 
   return (
     <section id="deportes" className="bg-ink py-20 xl:py-32">
@@ -66,6 +75,39 @@ export function Deporte() {
           </div>
         </motion.div>
 
+        {/* Instagram Reel — Liga Deportiva */}
+        <div className="grid xl:grid-cols-2 gap-8 xl:gap-16 mb-12 xl:mb-16 items-start">
+          {/* Embed */}
+          <div className="flex justify-center xl:justify-start">
+            <blockquote
+              className="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink="https://www.instagram.com/reel/DW4MnWdCPl4/?utm_source=ig_embed&utm_campaign=loading"
+              data-instgrm-version="14"
+              style={{
+                background: "#FFF",
+                border: 0,
+                borderRadius: "3px",
+                boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                margin: "1px",
+                maxWidth: "540px",
+                minWidth: "326px",
+                padding: 0,
+                width: "99.375%",
+              }}
+            />
+          </div>
+          {/* Editorial — TODO: Víctor enviar texto */}
+          <div className="flex flex-col gap-4 justify-center">
+            <p className="font-mono text-eyebrow text-cream/40 tracking-[0.14em] uppercase">
+              En acción
+            </p>
+            <p className="text-body text-cream/60 leading-relaxed">
+              {/* TODO: Víctor enviar texto editorial para este bloque */}
+              Mira a nuestros estudiantes en la Liga Deportiva Terapéutica.
+            </p>
+          </div>
+        </div>
         {/* Divider */}
         <div className="h-px bg-white/10 mb-12 xl:mb-16" />
 

@@ -16,13 +16,13 @@ export const PASOS: Paso[] = [
     num: "02",
     titulo: "Entrevista familiar y visita",
     desc: "Una reunión con la dirección académica para conocer las necesidades del estudiante, seguida de un recorrido por el campus. La visita guiada toma 15 minutos.",
-    duracion: "15 min + entrevista",
+    duracion: "30–60 min",
   },
   {
     num: "03",
     titulo: "Proceso de evaluación",
     desc: "Evaluación individualizada para conocer el perfil del estudiante y asegurarnos de que CELPIN sea el entorno correcto para su desarrollo.",
-    duracion: "1 sesión",
+    duracion: "2 días escolares",
   },
   {
     num: "04",

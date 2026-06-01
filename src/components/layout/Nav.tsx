@@ -36,11 +36,13 @@ export function Nav() {
         <div className="max-w-landing mx-auto px-5 xl:px-14 h-[72px] flex items-center justify-between gap-8">
           {/* Logo */}
           <a href="#" className="flex-shrink-0">
-            <img
-              src="/images/celpin-logo-transparent.png"
-              alt={SITE.siglas}
-              className="h-14 w-auto"
-            />
+            <div className="h-9 overflow-hidden">
+              <img
+                src="/images/celpin-logo-transparent.png"
+                alt={SITE.siglas}
+                className="h-[72px] w-auto -mt-1"
+              />
+            </div>
           </a>
 
           {/* Desktop links */}
@@ -98,11 +100,13 @@ export function Nav() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-border flex-shrink-0">
-                <img
-                  src="/images/celpin-logo-transparent.png"
-                  alt={SITE.siglas}
-                  className="h-9 w-auto"
-                />
+                <div className="h-7 overflow-hidden">
+                  <img
+                    src="/images/celpin-logo-transparent.png"
+                    alt={SITE.siglas}
+                    className="h-[56px] w-auto -mt-1"
+                  />
+                </div>
                 <button
                   onClick={() => setOpen(false)}
                   className="p-2 -mr-2 text-ink-soft hover:text-ink"

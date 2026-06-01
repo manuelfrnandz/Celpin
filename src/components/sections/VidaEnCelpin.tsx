@@ -4,10 +4,10 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 const FOTOS = [
   { src: "/images/primaria-1.png",           alt: "Estudiantes de primaria en clase" },
-  { src: "/images/primaria-2.png",           alt: "Actividad en el salón de primaria" },
+  { src: "/images/liga-grupo.jpg",           alt: "Equipo de la Liga Deportiva Terapéutica CELPIN" },
   { src: "/images/inicial-1.png",            alt: "Estudiantes en actividad creativa" },
   { src: "/images/primaria-3.png",           alt: "Comunidad CELPIN en la feria de lectura" },
-  { src: "/images/prog-secundaria.jpg",      alt: "Estudiantes de secundaria en actividad" },
+  { src: "/images/liga-bus.jpg",             alt: "Estudiantes en excursión deportiva" },
 ];
 
 export function VidaEnCelpin() {
