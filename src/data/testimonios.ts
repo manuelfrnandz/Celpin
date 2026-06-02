@@ -9,8 +9,8 @@ export interface Testimonio {
 export const TESTIMONIOS: Testimonio[] = [
   {
     id: "t1",
-    nombre: "Marisol Mendoza",
-    relacion: "Mamá de María Victoria Adrián Mendoza",
+    nombre: "Pamela Ciccone",
+    relacion: "Mamá de Johnny Ricardo León Ciccone",
     videoFile: "/videos/testimonio-marisol.mp4",
     thumbnail: "/images/placeholder.png",
   },
@@ -23,8 +23,8 @@ export const TESTIMONIOS: Testimonio[] = [
   },
   {
     id: "t3",
-    nombre: "Pamela Ciccone",
-    relacion: "Mamá de Johnny Ricardo León Ciccone",
+    nombre: "Marisol Mendoza",
+    relacion: "Mamá de María Victoria Adrián Mendoza",
     videoFile: "/videos/testimonio-pamela.mp4",
     thumbnail: "/images/placeholder.png",
   },

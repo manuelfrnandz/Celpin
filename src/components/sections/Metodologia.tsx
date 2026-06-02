@@ -87,10 +87,12 @@ export function Metodologia() {
 
           {/* Quote + attribution */}
           <div className="flex flex-col gap-6">
-            {/* TODO: Víctor enviar su quote — reemplazar el placeholder de abajo */}
-            <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink/40">
-              "Quote pendiente — Víctor lo compartirá pronto."
+            <blockquote className="font-serif italic text-[1.75rem] xl:text-[2.25rem] leading-snug text-ink">
+              "{SITE.director.cita}"
             </blockquote>
+            <p className="text-body text-ink-soft leading-relaxed">
+              {SITE.director.historia}
+            </p>
             <div className="h-px w-12 bg-border" />
             <div className="flex flex-col gap-1">
               <a

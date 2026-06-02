@@ -36,7 +36,7 @@ export const SITE = {
     titulo: "Director General · CELPIN",
     instagram: "https://www.instagram.com/victorperezobjio",
     foto: "/images/victor-director.jpg",
-    // TODO: Víctor enviar su quote personal
-    cita: "",
+    cita: "Alguien creyó en mí cuando pocos lo hicieron. Hoy hago lo mismo por otros.",
+    historia: "El 6 de octubre de 2001, el Dr. Pérez Hernández invitó a cuatro niños a compartir una tarde de juego en el Mirador Sur. Lo que parecía una actividad sencilla reveló algo extraordinario: cuando los niños son aceptados y valorados por quienes son, las diferencias dejan de separarlos y comienzan a unirlos. Aquella tarde nació la convicción que hoy da vida a CELPIN.",
   },
 } as const;
