@@ -75,25 +75,33 @@ export function Deporte() {
           </div>
         </motion.div>
 
-        {/* Video embed — Liga Deportiva */}
-        <div className="mb-12 xl:mb-16 flex justify-center">
+        {/* Video embeds — grid de hasta 3 */}
+        <div className="mb-12 xl:mb-16 grid sm:grid-cols-2 xl:grid-cols-2 gap-6 justify-items-center">
+          {/* Video 1 — Liga Deportiva */}
           <blockquote
-            className="instagram-media"
+            className="instagram-media !m-0 w-full"
             data-instgrm-captioned
             data-instgrm-permalink="https://www.instagram.com/reel/DQsZMD8j42Z/?utm_source=ig_embed&utm_campaign=loading"
             data-instgrm-version="14"
             style={{
-              background: "#FFF",
-              border: 0,
-              borderRadius: "3px",
+              background: "#FFF", border: 0, borderRadius: "3px",
               boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
-              margin: "1px",
-              maxWidth: "540px",
-              minWidth: "326px",
-              padding: 0,
-              width: "99.375%",
+              margin: 0, maxWidth: "100%", minWidth: "280px", padding: 0, width: "100%",
             }}
           />
+          {/* Video 2 — Ajedrez */}
+          <blockquote
+            className="instagram-media !m-0 w-full"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/DQZxwZhD_un/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-version="14"
+            style={{
+              background: "#FFF", border: 0, borderRadius: "3px",
+              boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+              margin: 0, maxWidth: "100%", minWidth: "280px", padding: 0, width: "100%",
+            }}
+          />
+          {/* Video 3 — TODO: agregar URL cuando Víctor lo envíe */}
         </div>
 
         {/* Divider */}
