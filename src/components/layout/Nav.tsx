@@ -34,13 +34,13 @@ export function Nav() {
         )}
       >
         <div className="max-w-landing mx-auto px-5 xl:px-14 h-[72px] flex items-center justify-between gap-8">
-          {/* Logo */}
+          {/* Logo — crop removes "Centro Educativo Los Pinos Nuevos" subtitle */}
           <a href="#" className="flex-shrink-0">
-            <div className="h-9 overflow-hidden">
+            <div className="h-[52px] overflow-hidden">
               <img
                 src="/images/celpin-logo-transparent.png"
                 alt={SITE.siglas}
-                className="h-[72px] w-auto -mt-1"
+                className="h-[76px] w-auto"
               />
             </div>
           </a>
@@ -100,11 +100,11 @@ export function Nav() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-border flex-shrink-0">
-                <div className="h-7 overflow-hidden">
+                <div className="h-[44px] overflow-hidden">
                   <img
                     src="/images/celpin-logo-transparent.png"
                     alt={SITE.siglas}
-                    className="h-[56px] w-auto -mt-1"
+                    className="h-[64px] w-auto"
                   />
                 </div>
                 <button

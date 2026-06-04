@@ -45,11 +45,14 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="sm:col-span-2 xl:col-span-1 flex flex-col gap-5">
-            <img
-              src="/images/celpin-logo-transparent.png"
-              alt="CELPIN"
-              className="h-10 w-auto object-contain object-left brightness-0 invert"
-            />
+            {/* Logo crop — removes "Centro Educativo Los Pinos Nuevos" subtitle */}
+            <div className="h-[60px] overflow-hidden">
+              <img
+                src="/images/celpin-logo-transparent.png"
+                alt="CELPIN"
+                className="h-[88px] w-auto brightness-0 invert"
+              />
+            </div>
             <p className="text-body text-cream/60 leading-relaxed max-w-xs">
               Centro educativo privado en Santo Domingo, R.D. Educación personalizada desde primaria hasta bachillerato, desde 2007.
             </p>
