@@ -9,9 +9,8 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 // Add/remove files from public/images/hero/ and list them here.
 // First item is the starting photo.
 const HERO_FOTOS = [
-  { src: "/images/hero/hero-01.jpg", alt: "Maestra con estudiantes en CELPIN" },
   { src: "/images/hero/hero-02.png", alt: "Víctor Pérez-Objío con maestra en evento CELPIN" },
-  { src: "/images/hero/hero-03.png", alt: "Estudiantes defilando con la bandera CELPIN" },
+  { src: "/images/hero/hero-03.png", alt: "Estudiantes desfilando con la bandera CELPIN" },
 ];
 
 // ─── Carousel component ─────────────────────────────────────────────────────
