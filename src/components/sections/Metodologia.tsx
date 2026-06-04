@@ -76,69 +76,63 @@ export function Metodologia() {
           </div>
         </motion.div>
 
-        {/* Director — Editorial layout */}
+        {/* Director — Editorial: foto+embed izquierda, texto derecha */}
         <motion.div
           initial={reduced ? {} : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.55, delay: 0.1 }}
-          className="border-t border-border pt-16 xl:pt-20 mt-16 xl:mt-20"
+          className="border-t border-border pt-16 xl:pt-20 mt-16 xl:mt-20 grid xl:grid-cols-[340px_1fr] gap-10 xl:gap-14 items-start"
         >
-          {/* flow-root = clearfix moderno — contiene los floats */}
-          <div className="xl:flow-root">
-
-            {/* Foto — flota a la izquierda en desktop */}
-            <div className="xl:float-left xl:w-[220px] xl:mr-10 xl:mb-4 mb-8 max-w-[220px] mx-auto xl:mx-0">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-ink">
-                <img
-                  src={SITE.director.foto}
-                  alt={SITE.director.nombre}
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-              <div className="mt-4 flex flex-col gap-0.5">
-                <a
-                  href={SITE.director.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-display font-semibold text-[1.05rem] text-ink hover:text-green-dark transition-colors"
-                >
-                  {SITE.director.nombre}
-                </a>
-                <p className="text-body-sm text-ink-muted">{SITE.director.titulo}</p>
-              </div>
-            </div>
-
-            {/* Instagram embed — flota a la derecha en desktop */}
-            <div className="xl:float-right xl:w-[360px] xl:ml-10 xl:mb-4 mb-8 mx-auto xl:mx-0 w-full max-w-[360px]">
-              <blockquote
-                className="instagram-media"
-                data-instgrm-captioned
-                data-instgrm-permalink="https://www.instagram.com/reel/DW4MnWdCPl4/?utm_source=ig_embed&utm_campaign=loading"
-                data-instgrm-version="14"
-                style={{
-                  background: "#FFF",
-                  border: 0,
-                  borderRadius: "3px",
-                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
-                  margin: 0,
-                  maxWidth: "360px",
-                  minWidth: "280px",
-                  padding: 0,
-                  width: "100%",
-                }}
+          {/* Columna izquierda: foto + embed apilados */}
+          <div className="flex flex-col gap-6">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-ink">
+              <img
+                src={SITE.director.foto}
+                alt={SITE.director.nombre}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
               />
             </div>
+            <blockquote
+              className="instagram-media"
+              data-instgrm-captioned
+              data-instgrm-permalink="https://www.instagram.com/reel/DW4MnWdCPl4/?utm_source=ig_embed&utm_campaign=loading"
+              data-instgrm-version="14"
+              style={{
+                background: "#FFF",
+                border: 0,
+                borderRadius: "3px",
+                boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                margin: 0,
+                maxWidth: "340px",
+                minWidth: "280px",
+                padding: 0,
+                width: "100%",
+              }}
+            />
+          </div>
 
-            {/* Quote + historia — fluyen entre foto y embed */}
-            <blockquote className="font-serif italic text-[1.5rem] xl:text-[1.85rem] leading-snug text-ink mb-6">
+          {/* Columna derecha: todo el texto */}
+          <div className="flex flex-col gap-6">
+            <blockquote className="font-serif italic text-[1.5rem] xl:text-[1.85rem] leading-snug text-ink">
               "{SITE.director.cita}"
             </blockquote>
             <p className="text-body text-ink-soft leading-relaxed">
               {SITE.director.historia}
             </p>
-
+            <div className="h-px w-12 bg-border" />
+            <div className="flex flex-col gap-0.5">
+              <a
+                href={SITE.director.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display font-semibold text-h3-card text-ink hover:text-green-dark transition-colors"
+              >
+                {SITE.director.nombre}
+              </a>
+              <p className="text-body-sm text-ink-muted">{SITE.director.titulo}</p>
+            </div>
           </div>
         </motion.div>
 
