@@ -37,6 +37,6 @@ export const SITE = {
     instagram: "https://www.instagram.com/victorperezobjio",
     foto: "/images/victor-director.jpg",
     cita: "Alguien creyó en mí cuando pocos lo hicieron. Hoy hago lo mismo por otros.",
-    historia: "El 6 de octubre de 2001, el Dr. Pérez Hernández invitó a cuatro niños a compartir una tarde de juego en el Mirador Sur. Lo que parecía una actividad sencilla reveló algo extraordinario: cuando los niños son aceptados y valorados por quienes son, las diferencias dejan de separarlos y comienzan a unirlos. Aquella tarde nació la convicción que hoy da vida a CELPIN.",
+    historia: "El 6 de octubre de 2001, un niño que tenía dificultades para hacer amigos fue invitado por el Dr. Pérez Hernández a compartir una tarde de juego junto a otros tres niños. Lo que parecía una actividad sencilla terminó revelando algo extraordinario: cuando los niños son colocados en un entorno donde son aceptados, comprendidos y valorados por quienes son, las diferencias dejan de separarlos y comienzan a unirlos. Aquella tarde, en un espacio vacío del Mirador Sur, nació mucho más que una actividad deportiva; nació una filosofía que cambiaría la vida de cientos de familias. La convicción de que ningún niño debe ser definido por aquello que le dificulta encajar, y que detrás de cada niño incomprendido existe un potencial extraordinario esperando la oportunidad de ser descubierto. Esa misma convicción es la que hoy da vida a CELPIN y continúa guiando cada paso de nuestra misión.",
   },
 } as const;

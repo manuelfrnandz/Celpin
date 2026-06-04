@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { PILARES } from "../../data/pilares";
 import { SITE } from "../../data/site";
@@ -7,6 +8,14 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function Metodologia() {
   const reduced = useReducedMotion();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
 
   return (
     <section id="metodologia" className="bg-cream py-20 xl:py-32 border-t border-border">
@@ -108,6 +117,33 @@ export function Metodologia() {
               </p>
             </div>
           </div>
+        </motion.div>
+
+        {/* Instagram Reel — debajo de Víctor */}
+        <motion.div
+          initial={reduced ? {} : { opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          className="border-t border-border pt-16 xl:pt-20 mt-16 xl:mt-20 flex justify-center"
+        >
+          <blockquote
+            className="instagram-media"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/DW4MnWdCPl4/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-version="14"
+            style={{
+              background: "#FFF",
+              border: 0,
+              borderRadius: "3px",
+              boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+              margin: "1px",
+              maxWidth: "540px",
+              minWidth: "326px",
+              padding: 0,
+              width: "99.375%",
+            }}
+          />
         </motion.div>
 
       </div>
