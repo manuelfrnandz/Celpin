@@ -10,7 +10,8 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 // First item is the starting photo.
 const HERO_FOTOS = [
   { src: "/images/hero/hero-01.jpg", alt: "Maestra con estudiantes en CELPIN" },
-  // TODO: agregar más fotos aquí cuando estén listas
+  { src: "/images/hero/hero-02.png", alt: "Víctor Pérez-Objío con maestra en evento CELPIN" },
+  { src: "/images/hero/hero-03.png", alt: "Estudiantes defilando con la bandera CELPIN" },
 ];
 
 // ─── Carousel component ─────────────────────────────────────────────────────
