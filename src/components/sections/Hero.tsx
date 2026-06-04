@@ -1,8 +1,73 @@
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { SITE } from "../../data/site";
 import { Button } from "../ui/Button";
 import { Pill } from "../ui/Pill";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
+
+// ─── Hero carousel photos ───────────────────────────────────────────────────
+// Add/remove files from public/images/hero/ and list them here.
+// First item is the starting photo.
+const HERO_FOTOS = [
+  { src: "/images/hero/hero-01.jpg", alt: "Maestra con estudiantes en CELPIN" },
+  // TODO: agregar más fotos aquí cuando estén listas
+];
+
+// ─── Carousel component ─────────────────────────────────────────────────────
+function HeroCarousel({ reduced }: { reduced: boolean }) {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    if (HERO_FOTOS.length <= 1) return;
+    if (paused) return;
+    intervalRef.current = setInterval(() => {
+      setIndex((i) => (i + 1) % HERO_FOTOS.length);
+    }, 5000);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [paused]);
+
+  const foto = HERO_FOTOS[index];
+
+  return (
+    <div
+      className="rounded-2xl overflow-hidden aspect-[4/5] relative"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <AnimatePresence mode="sync">
+        <motion.img
+          key={foto.src}
+          src={foto.src}
+          alt={foto.alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          initial={reduced ? {} : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={reduced ? {} : { opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
+
+      {/* Dot indicators — only show when more than 1 photo */}
+      {HERO_FOTOS.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+          {HERO_FOTOS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                i === index ? "bg-white w-4" : "bg-white/50"
+              }`}
+              aria-label={`Foto ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURIComponent(
   "Hola, me interesa conocer más sobre CELPIN. ¿Podría agendar una visita?"
@@ -91,15 +156,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="relative"
           >
-            {/* Hero image — swap for liga-grupo.png when available */}
-            <div className="rounded-2xl overflow-hidden aspect-[4/5]">
-              <img
-                src="/images/inicial-2.png"
-                alt="Maestra con estudiantes en CELPIN"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-            </div>
+            {/* Hero carousel */}
+            <HeroCarousel reduced={reduced} />
 
             {/* Floating card: ratio — desktop only */}
             <div
