@@ -66,11 +66,17 @@ export function Deporte() {
           </div>
         </motion.div>
 
+        {/* Video embed — Liga Deportiva */}
+        {/* TODO: reemplazar URL con el video que envíe Víctor */}
+        {/* <div className="mb-12 xl:mb-16 flex justify-center">
+          <blockquote className="instagram-media" data-instgrm-permalink="URL_AQUI" ... />
+        </div> */}
+
         {/* Divider */}
         <div className="h-px bg-white/10 mb-12 xl:mb-16" />
 
-        {/* Wolves + Okami */}
-        <div className="grid md:grid-cols-2 gap-5">
+        {/* Wolves + Okami + Ajedrez */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
 
           {/* CELPIN Wolves */}
           <motion.div
@@ -115,6 +121,25 @@ export function Deporte() {
                 {DEPORTE.okami.nombre}
               </h3>
               <p className="text-body text-cream/60">{DEPORTE.okami.descripcion}</p>
+            </div>
+          </motion.div>
+
+          {/* Ajedrez */}
+          <motion.div
+            initial={reduced ? {} : { opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.4, delay: 0.16 }}
+            className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-5 items-start"
+          >
+            <div className="w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 flex items-center justify-center text-3xl select-none">
+              ♟
+            </div>
+            <div>
+              <h3 className="font-display font-semibold text-h3-card text-cream mb-2">
+                {DEPORTE.ajedrez.nombre}
+              </h3>
+              <p className="text-body text-cream/60">{DEPORTE.ajedrez.descripcion}</p>
             </div>
           </motion.div>
 

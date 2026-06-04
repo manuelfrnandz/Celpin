@@ -18,4 +18,9 @@ export const DEPORTE = {
       "Karate, Taekwondo y Judo como herramientas educativas que promueven el autocontrol, la concentración, la perseverancia y el respeto. Su enfoque va más allá de lo físico, aportando estructura emocional y mental al proceso de aprendizaje.",
     logo: "/images/okami-dojo-logo.png",
   },
+  ajedrez: {
+    nombre: "Torneo Intramuros de Ajedrez",
+    descripcion:
+      "El ajedrez en CELPIN es mucho más que un juego. A través del Torneo Intramuros anual, los estudiantes desarrollan pensamiento estratégico, concentración, toma de decisiones y gestión emocional ante la presión. Cada partida es una oportunidad de aprender a planificar, anticipar y perseverar.",
+  },
 } as const;
