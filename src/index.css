@@ -73,9 +73,24 @@
 
   /* Solo el "margen lateral" de las secciones cream muestra el patrón.
      La columna central (max-w-landing) queda solida para que el texto
-     no se confunda con los pinos del fondo. */
+     no se confunda con los pinos del fondo. Borde + sombra suave estilo
+     hover para que se vea como un panel elevado sobre el patrón. */
   .bg-cream > .max-w-landing {
     background-color: #FAF8F3;
+    border: 1px solid rgba(11, 27, 46, 0.10);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px -24px rgba(11, 27, 46, 0.18),
+                0 6px 18px -12px rgba(11, 27, 46, 0.10) !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+  }
+
+  .bg-cream > .max-w-landing:hover {
+    border-color: rgba(11, 27, 46, 0.18);
+    box-shadow: 0 36px 90px -28px rgba(11, 27, 46, 0.26),
+                0 10px 24px -12px rgba(11, 27, 46, 0.14) !important;
+    transform: translateY(-2px);
   }
 
   /* Safe-area padding for sticky CTA on iOS notch/home-bar devices */
