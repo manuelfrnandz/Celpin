@@ -12,7 +12,7 @@ export const PROGRAMAS: Programa[] = [
   {
     key: "primaria",
     tag: "Primaria",
-    edad: "1° – 6° grado",
+    edad: "",
     titulo: "Bases académicas sólidas, con corazón.",
     desc: "Educación personalizada que fortalece las bases académicas y socioemocionales mediante metodologías activas, materiales concretos y estrategias Montessori y STEAM, respetando los ritmos de aprendizaje de cada estudiante.",
     foto: "/images/prog-inicial.jpg",
@@ -20,10 +20,10 @@ export const PROGRAMAS: Programa[] = [
   {
     key: "secundaria",
     tag: "Secundaria",
-    edad: "1° – 6° grado",
+    edad: "",
     titulo: "Líderes con criterio.",
     desc: "Metodología orientada al desarrollo de competencias académicas, pensamiento crítico y autonomía, integrando proyectos STEAM y la práctica deportiva como parte esencial del currículo.",
-    foto: "/images/liga-grupo.jpg",
+    foto: "/images/secundaria-100050.png",
   },
   {
     key: "strukturas",
