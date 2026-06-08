@@ -18,7 +18,10 @@
 
   body {
     margin: 0;
-    background-color: #FAF8F3;
+    background-color: #F6F8F3;
+    background-image: url('/images/pattern-1-diagonal.png');
+    background-repeat: repeat;
+    background-size: 80px;
     color: #0B1B2E;
     font-family: 'Geist', system-ui, -apple-system, sans-serif;
     font-size: 15px;
