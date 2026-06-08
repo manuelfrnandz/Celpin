@@ -29,8 +29,8 @@ export function Nav() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "bg-cream/95 backdrop-blur-md border-b border-border shadow-sm"
-            : "bg-transparent"
+            ? "bg-cream-solid backdrop-blur-md border-b border-border shadow-sm"
+            : "bg-cream-solid"
         )}
       >
         <div className="max-w-landing mx-auto px-5 xl:px-14 h-[72px] flex items-center justify-between gap-8">

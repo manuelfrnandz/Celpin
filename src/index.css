@@ -65,6 +65,23 @@
     background-size: 80px;
   }
 
+  /* Cream sólido (sin patrón) — usado por el nav y los headers de cada sección */
+  .bg-cream-solid {
+    background-color: #F6F8F3 !important;
+    background-image: none !important;
+  }
+
+  /* Bloque protector para headlines de sección: solido + sombra suave para
+     que el H2/eyebrow no se confundan con el patrón de fondo. */
+  .headline-block {
+    background-color: #F6F8F3;
+    border-radius: 18px;
+    padding: 20px 24px;
+    box-shadow: 0 10px 40px -16px rgba(11, 27, 46, 0.08);
+    display: inline-block;
+    max-width: 100%;
+  }
+
   /* Safe-area padding for sticky CTA on iOS notch/home-bar devices */
   .main-content {
     padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));

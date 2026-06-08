@@ -10,7 +10,7 @@ export function Documentos() {
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}
-        <div className="max-w-2xl mb-10 xl:mb-12">
+        <div className="max-w-2xl mb-10 xl:mb-12 headline-block">
           <Eyebrow number="09" label="Documentos" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Descarga nuestros{" "}
