@@ -18,7 +18,7 @@
 
   body {
     margin: 0;
-    background-color: #F6F8F3;
+    background-color: #FAF8F3;
     color: #0B1B2E;
     font-family: 'Geist', system-ui, -apple-system, sans-serif;
     font-size: 15px;
@@ -59,7 +59,7 @@
 
   /* Pattern 1 — Diagonal del pino, sobre fondos cream */
   .bg-cream {
-    background-color: #F6F8F3;
+    background-color: #FAF8F3;
     background-image: url('/images/pattern-1-diagonal.png');
     background-repeat: repeat;
     background-size: 80px;
@@ -67,19 +67,15 @@
 
   /* Cream sólido (sin patrón) — usado por el nav y los headers de cada sección */
   .bg-cream-solid {
-    background-color: #F6F8F3 !important;
+    background-color: #FAF8F3 !important;
     background-image: none !important;
   }
 
-  /* Bloque protector para headlines de sección: solido + sombra suave para
-     que el H2/eyebrow no se confundan con el patrón de fondo. */
-  .headline-block {
-    background-color: #F6F8F3;
-    border-radius: 18px;
-    padding: 20px 24px;
-    box-shadow: 0 10px 40px -16px rgba(11, 27, 46, 0.08);
-    display: inline-block;
-    max-width: 100%;
+  /* Solo el "margen lateral" de las secciones cream muestra el patrón.
+     La columna central (max-w-landing) queda solida para que el texto
+     no se confunda con los pinos del fondo. */
+  .bg-cream > .max-w-landing {
+    background-color: #FAF8F3;
   }
 
   /* Safe-area padding for sticky CTA on iOS notch/home-bar devices */

@@ -27,7 +27,7 @@ export function VidaEnCelpin() {
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}
-        <div className="max-w-2xl mb-12 xl:mb-16 headline-block">
+        <div className="max-w-2xl mb-12 xl:mb-16">
           <Eyebrow number="05" label="Vida en CELPIN" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Una comunidad que{" "}
