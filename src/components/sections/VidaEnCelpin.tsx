@@ -1,18 +1,51 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Eyebrow } from "../ui/Eyebrow";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
+// Fotos en /public/images/vida/ — rotan entre los 5 slots cada 4s
 const FOTOS = [
-  { src: "/images/evento-liga-celebracion.jpg",  alt: "Estudiante celebrando en la Liga Deportiva Terapéutica" },
-  { src: "/images/evento-graduacion-diploma.jpg", alt: "Graduanda CELPIN recibiendo su diploma" },
-  { src: "/images/evento-liga-cuerda.jpg",        alt: "Estudiantes en actividad deportiva al aire libre" },
-  { src: "/images/inicial-3.png",                alt: "Proyecto de arte renacentista — La Mona Lisa" },
-  { src: "/images/evento-graduacion-ceremonia.jpg", alt: "Ceremonia de graduación CELPIN 2025" },
+  { src: "/images/vida/evento-liga-celebracion.jpg", alt: "Estudiantes celebrando en la Liga Deportiva CELPIN" },
+  { src: "/images/vida/liga-grupo.jpg",              alt: "Equipo de la Liga Deportiva CELPIN" },
+  { src: "/images/vida/hero-02.png",                  alt: "Víctor Pérez-Objío con maestra en evento CELPIN" },
+  { src: "/images/vida/Screenshot 2026-06-03 125917.png", alt: "Vida estudiantil CELPIN" },
+  { src: "/images/vida/Screenshot 2026-06-04 100153.png", alt: "Comunidad CELPIN" },
 ];
+
+function RotatingTile({
+  slot,
+  offset,
+  className,
+  reduced,
+}: {
+  slot: number;
+  offset: number;
+  className: string;
+  reduced: boolean;
+}) {
+  const foto = FOTOS[(slot + offset) % FOTOS.length];
+  return (
+    <div className={className}>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.img
+          key={foto.src}
+          src={foto.src}
+          alt={foto.alt}
+          loading="lazy"
+          className="w-full h-full object-cover"
+          initial={reduced ? {} : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={reduced ? {} : { opacity: 0 }}
+          transition={{ duration: 0.6 }}
+        />
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export function VidaEnCelpin() {
   const reduced = useReducedMotion();
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -21,6 +54,12 @@ export function VidaEnCelpin() {
     document.body.appendChild(script);
     return () => { document.body.removeChild(script); };
   }, []);
+
+  useEffect(() => {
+    if (reduced) return;
+    const id = setInterval(() => setOffset((o) => (o + 1) % FOTOS.length), 4000);
+    return () => clearInterval(id);
+  }, [reduced]);
 
   return (
     <section id="vida" className="bg-cream py-20 xl:py-32 border-t border-border">
@@ -49,21 +88,20 @@ export function VidaEnCelpin() {
         >
           {/* Row 1: 2fr + 1fr */}
           <div className="grid md:grid-cols-2 xl:grid-cols-[2fr_1fr] gap-5">
-            <div className="rounded-2xl overflow-hidden aspect-[16/9]">
-              <img src={FOTOS[0].src} alt={FOTOS[0].alt} className="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[16/9] xl:aspect-auto xl:min-h-[300px]">
-              <img src={FOTOS[1].src} alt={FOTOS[1].alt} className="w-full h-full object-cover" loading="lazy" />
-            </div>
+            <RotatingTile slot={0} offset={offset} reduced={reduced}
+              className="rounded-2xl overflow-hidden aspect-[16/9]" />
+            <RotatingTile slot={1} offset={offset} reduced={reduced}
+              className="rounded-2xl overflow-hidden aspect-[16/9] xl:aspect-auto xl:min-h-[300px]" />
           </div>
 
           {/* Row 2: 3 equal */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {FOTOS.slice(2).map((foto) => (
-              <div key={foto.src} className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={foto.src} alt={foto.alt} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
+            <RotatingTile slot={2} offset={offset} reduced={reduced}
+              className="rounded-2xl overflow-hidden aspect-[4/3]" />
+            <RotatingTile slot={3} offset={offset} reduced={reduced}
+              className="rounded-2xl overflow-hidden aspect-[4/3]" />
+            <RotatingTile slot={4} offset={offset} reduced={reduced}
+              className="rounded-2xl overflow-hidden aspect-[4/3]" />
           </div>
         </motion.div>
 
