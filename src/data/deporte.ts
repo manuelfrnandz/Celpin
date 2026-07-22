@@ -19,8 +19,8 @@ export const DEPORTE = {
     logo: "/images/okami-dojo-logo.png",
   },
   ajedrez: {
-    nombre: "Torneo Intramuros de Ajedrez",
+    nombre: "Torneos Intramuros",
     descripcion:
-      "El ajedrez en CELPIN es mucho más que un juego. A través del Torneo Intramuros anual, los estudiantes desarrollan pensamiento estratégico, concentración, toma de decisiones y gestión emocional ante la presión. Cada partida es una oportunidad de aprender a planificar, anticipar y perseverar.",
+      "Cada año celebramos torneos intramuros de Ajedrez, Ping-pong, Basketball, Dominó y Soccer. Más allá de la competencia, cada disciplina desarrolla algo distinto: pensamiento estratégico, concentración, trabajo en equipo, autorregulación y gestión emocional ante la presión. Son oportunidades para aprender a planificar, convivir y perseverar.",
   },
 } as const;

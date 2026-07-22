@@ -22,7 +22,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "¿Cuál es el horario?",
-    a: "Jornada regular de 7:30 AM a 2:00 PM, lunes a viernes. Ofrecemos jornada extendida hasta las 4:30 PM, pero exclusivamente de lunes a jueves, donde se desarrollan sala de tareas, refuerzos académicos y nivelaciones.",
+    a: "Jornada regular de 7:30 AM a 2:00 PM, lunes a viernes. Ofrecemos jornada extendida hasta las 4:30 PM de lunes a jueves, donde se desarrollan sala de tareas, refuerzos académicos y nivelaciones.",
   },
   {
     q: "¿Cómo es el proceso de admisión?",
@@ -34,6 +34,6 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "¿Qué actividades extracurriculares tienen?",
-    a: "CELPIN Wolves (equipos deportivos), Liga Deportiva Terapéutica fundada en 2001 (2 viernes al mes en el Club San Gerónimo), Okami Dojo (Karate, Taekwondo y Judo). También ofrecemos clases extracurriculares relacionadas con las artes y música.",
+    a: "CELPIN Wolves (equipos deportivos), Liga Deportiva Terapéutica fundada en 2001 (2 viernes al mes en el Club San Gerónimo) y Okami Dojo (Karate, Taekwondo y Judo). Además ofrecemos clases extracurriculares de Piano, Guitarra, Canto, Baile y Teatro.",
   },
 ];

@@ -7,7 +7,6 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 const FOTOS = [
   { src: "/images/vida/evento-liga-celebracion.jpg", alt: "Estudiantes celebrando en la Liga Deportiva CELPIN" },
   { src: "/images/vida/liga-grupo.jpg",              alt: "Equipo de la Liga Deportiva CELPIN" },
-  { src: "/images/vida/hero-02.png",                  alt: "Víctor Pérez-Objío con maestra en evento CELPIN" },
   { src: "/images/vida/Screenshot 2026-06-03 125917.png", alt: "Vida estudiantil CELPIN" },
   { src: "/images/vida/Screenshot 2026-06-04 100153.png", alt: "Comunidad CELPIN" },
 ];

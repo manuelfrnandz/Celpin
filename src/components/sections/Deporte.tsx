@@ -164,8 +164,8 @@ export function Deporte() {
             transition={{ duration: 0.4, delay: 0.16 }}
             className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-5 items-start"
           >
-            <div className="w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 flex items-center justify-center text-3xl select-none">
-              ♟
+            <div className="w-16 h-16 flex-shrink-0 rounded-xl bg-white/10 flex items-center justify-center text-2xl select-none">
+              🏆
             </div>
             <div>
               <h3 className="font-display font-semibold text-h3-card text-cream mb-2">
