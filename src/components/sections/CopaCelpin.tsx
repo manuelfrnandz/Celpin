@@ -42,11 +42,11 @@ export function CopaCelpin() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="bg-white rounded-2xl border border-border p-6 xl:p-8 flex flex-col items-center gap-4 hover:shadow-card transition-shadow"
             >
-              <div className="aspect-square w-full max-w-[180px] rounded-2xl overflow-hidden flex items-center justify-center">
+              <div className="aspect-square w-full max-w-[200px] flex items-center justify-center">
                 <img
                   src={equipo.logo}
                   alt={equipo.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>

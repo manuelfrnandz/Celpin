@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="7" fill="#0B1B2E"/>
-  <path d="M16 5 L26 27 L6 27 Z" fill="#85A93D"/>
-  <path d="M14 14 L22 24" stroke="#0B1B2E" stroke-width="2" stroke-linecap="round"/>
+  <!-- Pino "A" del logo CELPIN -->
+  <g fill="#85A93D">
+    <!-- Pierna izquierda del A -->
+    <path d="M16 5 L11 27 L14 27 L17.5 12 Z"/>
+    <!-- Pierna derecha del A -->
+    <path d="M16 5 L21 27 L18 27 L14.5 12 Z"/>
+    <!-- Crossbar -->
+    <rect x="12" y="18" width="8" height="2" rx="0.5"/>
+  </g>
 </svg>
