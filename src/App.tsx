@@ -7,6 +7,7 @@ import { TrustStrip } from "./components/sections/TrustStrip";
 import { Programas } from "./components/sections/Programas";
 import { Metodologia } from "./components/sections/Metodologia";
 import { Deporte } from "./components/sections/Deporte";
+import { CopaCelpin } from "./components/sections/CopaCelpin";
 import { VidaEnCelpin } from "./components/sections/VidaEnCelpin";
 import { Testimonios } from "./components/sections/Testimonios";
 import { Admisiones } from "./components/sections/Admisiones";
@@ -23,6 +24,7 @@ export default function App() {
         <Programas />
         <Metodologia />
         <Deporte />
+        <CopaCelpin />
         <VidaEnCelpin />
         <Testimonios />
         <Admisiones />

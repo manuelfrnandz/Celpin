@@ -20,7 +20,7 @@ export function FAQ() {
 
           {/* Header */}
           <div className="mb-12 xl:mb-14">
-            <Eyebrow number="08" label="Preguntas frecuentes" className="mb-4" />
+            <Eyebrow number="09" label="Preguntas frecuentes" className="mb-4" />
             <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink">
               Lo que{" "}
               <em className="font-serif italic">necesitas saber.</em>

@@ -203,7 +203,7 @@ export function Admisiones() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="07" label="Admisiones" className="mb-4" />
+          <Eyebrow number="08" label="Admisiones" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             El proceso es más{" "}
             <em className="font-serif italic">fácil de lo que crees.</em>

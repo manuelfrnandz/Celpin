@@ -11,7 +11,7 @@ export function Documentos() {
 
         {/* Header */}
         <div className="max-w-2xl mb-10 xl:mb-12">
-          <Eyebrow number="09" label="Documentos" className="mb-4" />
+          <Eyebrow number="10" label="Documentos" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Descarga nuestros{" "}
             <em className="font-serif italic">materiales.</em>
