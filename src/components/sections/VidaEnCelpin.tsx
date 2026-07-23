@@ -104,10 +104,10 @@ export function VidaEnCelpin() {
           </div>
         </motion.div>
 
-        {/* Instagram Reel */}
-        <div className="mt-10 flex justify-center">
+        {/* Instagram Reels — dos embeds lado a lado en desktop, apilados en mobile */}
+        <div className="mt-10 grid sm:grid-cols-2 gap-6 justify-items-center">
           <blockquote
-            className="instagram-media"
+            className="instagram-media !m-0 w-full"
             data-instgrm-captioned
             data-instgrm-permalink="https://www.instagram.com/reel/DQZxwZhD_un/?utm_source=ig_embed&utm_campaign=loading"
             data-instgrm-version="14"
@@ -116,11 +116,28 @@ export function VidaEnCelpin() {
               border: 0,
               borderRadius: "3px",
               boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
-              margin: "1px",
-              maxWidth: "540px",
-              minWidth: "326px",
+              margin: 0,
+              maxWidth: "100%",
+              minWidth: "280px",
               padding: 0,
-              width: "99.375%",
+              width: "100%",
+            }}
+          />
+          <blockquote
+            className="instagram-media !m-0 w-full"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/DXugHlTD3LO/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-version="14"
+            style={{
+              background: "#FFF",
+              border: 0,
+              borderRadius: "3px",
+              boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+              margin: 0,
+              maxWidth: "100%",
+              minWidth: "280px",
+              padding: 0,
+              width: "100%",
             }}
           />
         </div>
