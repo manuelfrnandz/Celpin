@@ -82,15 +82,18 @@ export function Footer() {
                 </a>
                 <span className="font-mono text-[7px] tracking-[0.14em] uppercase text-cream/25 select-none">STRUKT.</span>
               </div>
-              <a
-                href={SITE.redes.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
-                aria-label="YouTube CELPIN"
-              >
-                <YtIcon />
-              </a>
+              <div className="flex flex-col items-center gap-1">
+                <a
+                  href={SITE.redes.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-cream/60 hover:text-cream transition-colors"
+                  aria-label="YouTube CELPIN"
+                >
+                  <YtIcon />
+                </a>
+                <span className="font-mono text-[7px] tracking-[0.14em] uppercase text-cream/25 select-none">YOUTUBE</span>
+              </div>
             </div>
           </div>
 
