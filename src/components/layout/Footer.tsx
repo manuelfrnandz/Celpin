@@ -124,7 +124,12 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {NIVELES.map((n) => (
                 <li key={n}>
-                  <span className="text-body text-cream/60">{n}</span>
+                  <a
+                    href="#programas"
+                    className="text-body text-cream/60 hover:text-cream transition-colors"
+                  >
+                    {n}
+                  </a>
                 </li>
               ))}
             </ul>
