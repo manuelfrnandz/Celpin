@@ -4,7 +4,6 @@ import { Footer } from "./components/layout/Footer";
 import { StickyCTA } from "./components/layout/StickyCTA";
 import { Hero } from "./components/sections/Hero";
 import { TrustStrip } from "./components/sections/TrustStrip";
-import { Reconocimientos } from "./components/sections/Reconocimientos";
 import { Programas } from "./components/sections/Programas";
 import { Metodologia } from "./components/sections/Metodologia";
 import { Deporte } from "./components/sections/Deporte";
@@ -22,7 +21,6 @@ export default function App() {
       <main className="main-content xl:pb-0">
         <Hero />
         <TrustStrip />
-        <Reconocimientos />
         <Programas />
         <Metodologia />
         <Deporte />
