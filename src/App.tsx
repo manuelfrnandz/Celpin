@@ -16,15 +16,24 @@ import { FAQ } from "./components/sections/FAQ";
 import { Documentos } from "./components/sections/Documentos";
 
 export default function App() {
-  // Scroll to hash after React mounts (SPA: sections don't exist on first paint)
+  // Scroll to hash after React mounts (SPA: sections don't exist on first paint).
+  // Computes manual offset to clear the sticky nav — scroll-margin-top alone
+  // doesn't cover it consistently across mobile/safe-areas.
   useEffect(() => {
     if (!window.location.hash) return;
     const id = window.location.hash.slice(1);
-    // Wait one frame + a small buffer so images/fonts don't shift the target
-    const t = setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 200);
-    return () => clearTimeout(t);
+    const scrollToHash = () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const nav = document.querySelector("header");
+      const navH = nav?.getBoundingClientRect().height ?? 72;
+      const y = el.getBoundingClientRect().top + window.scrollY - navH - 12;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+    // First attempt after mount, second attempt after fonts/images shift the layout
+    const t1 = setTimeout(scrollToHash, 200);
+    const t2 = setTimeout(scrollToHash, 900);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
   return (
