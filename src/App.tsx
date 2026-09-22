@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./index.css";
 import { Nav } from "./components/layout/Nav";
 import { Footer } from "./components/layout/Footer";
@@ -15,6 +16,17 @@ import { FAQ } from "./components/sections/FAQ";
 import { Documentos } from "./components/sections/Documentos";
 
 export default function App() {
+  // Scroll to hash after React mounts (SPA: sections don't exist on first paint)
+  useEffect(() => {
+    if (!window.location.hash) return;
+    const id = window.location.hash.slice(1);
+    // Wait one frame + a small buffer so images/fonts don't shift the target
+    const t = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 200);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <div className="min-h-screen bg-cream text-ink font-body">
       <Nav />
