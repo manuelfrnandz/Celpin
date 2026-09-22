@@ -16,24 +16,34 @@ import { FAQ } from "./components/sections/FAQ";
 import { Documentos } from "./components/sections/Documentos";
 
 export default function App() {
-  // Scroll to hash after React mounts (SPA: sections don't exist on first paint).
-  // Computes manual offset to clear the sticky nav — scroll-margin-top alone
-  // doesn't cover it consistently across mobile/safe-areas.
+  // Scroll to hash after React mounts. This SPA has heavy async content —
+  // Instagram embeds in Deporte and Vida, images throughout — that reflow the
+  // page as they load. A single scroll lands too high because sections below
+  // haven't been pushed down yet. So we retry across the embed load window
+  // (up to ~4s) and stop as soon as the target position stabilizes.
   useEffect(() => {
     if (!window.location.hash) return;
     const id = window.location.hash.slice(1);
+    let lastY = -1;
+    let stableHits = 0;
     const scrollToHash = () => {
       const el = document.getElementById(id);
       if (!el) return;
       const nav = document.querySelector("header");
       const navH = nav?.getBoundingClientRect().height ?? 72;
-      const y = el.getBoundingClientRect().top + window.scrollY - navH - 12;
+      const y = Math.max(0, el.getBoundingClientRect().top + window.scrollY - navH - 12);
+      if (Math.abs(y - lastY) < 4) {
+        stableHits++;
+        if (stableHits >= 2) return; // page stabilized, don't rescroll
+      } else {
+        stableHits = 0;
+      }
+      lastY = y;
       window.scrollTo({ top: y, behavior: "smooth" });
     };
-    // First attempt after mount, second attempt after fonts/images shift the layout
-    const t1 = setTimeout(scrollToHash, 200);
-    const t2 = setTimeout(scrollToHash, 900);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
+    const delays = [150, 500, 1200, 2200, 3500];
+    const timers = delays.map((d) => setTimeout(scrollToHash, d));
+    return () => timers.forEach(clearTimeout);
   }, []);
 
   return (
