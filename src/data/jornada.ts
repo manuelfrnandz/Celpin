@@ -15,10 +15,6 @@ export const JORNADA = {
   academico: ["Sala de tareas", "Nivelación", "Refuerzo académico"],
   habitos:
     "Además del apoyo académico, promovemos el desarrollo de hábitos de estudio, organización, responsabilidad y autonomía, manteniendo el acompañamiento y enfoque educativo que caracteriza a CELPIN.",
-  coordinadora: {
-    nombre: "Lic. Lialda Juliana Siri",
-    titulo: "Coordinadora Conductual · Maestra encargada de CELPIN JE",
-  },
   extracurricularesIntro:
     "Como parte de nuestra Jornada Extendida, CELPIN ofrece actividades extracurriculares que permiten a nuestros estudiantes explorar nuevos talentos, desarrollar habilidades artísticas y fortalecer su expresión y creatividad.",
   ingles: {

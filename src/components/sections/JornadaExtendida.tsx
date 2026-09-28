@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Clock, Check } from "lucide-react";
 import { JORNADA, type ClaseExtra } from "../../data/jornada";
 import { SITE } from "../../data/site";
-import { Eyebrow } from "../ui/Eyebrow";
 import { Button } from "../ui/Button";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
@@ -49,11 +48,12 @@ export function JornadaExtendida() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow label="Jornada Extendida" className="mb-4" />
-          <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
-            Más tiempo para{" "}
-            <em className="font-serif italic text-green">aprender,</em> reforzar y avanzar.
+          <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-3">
+            Jornada <em className="font-serif italic font-normal text-green">Extendida</em>
           </h2>
+          <p className="font-display font-medium text-[22px] xl:text-[28px] leading-snug tracking-[-0.015em] text-ink-soft mb-5">
+            Más tiempo para aprender, reforzar y avanzar.
+          </p>
           <p className="text-lead-lg text-ink-soft mb-5">{JORNADA.descripcion}</p>
           <p className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-tint text-green-ink rounded-full font-body font-medium text-body-sm">
             <Clock size={15} strokeWidth={1.75} />
@@ -84,10 +84,6 @@ export function JornadaExtendida() {
           </div>
           <div className="flex flex-col gap-5 lg:pt-12">
             <p className="text-body text-ink-soft">{JORNADA.habitos}</p>
-            <div className="flex flex-col gap-0.5">
-              <p className="font-body font-semibold text-body text-ink">{JORNADA.coordinadora.nombre}</p>
-              <p className="text-body-sm text-ink-muted">{JORNADA.coordinadora.titulo}</p>
-            </div>
           </div>
         </motion.div>
 
