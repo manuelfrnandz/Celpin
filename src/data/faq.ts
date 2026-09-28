@@ -22,7 +22,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "¿Cuál es el horario?",
-    a: "Jornada regular de 7:30 AM a 2:00 PM, lunes a viernes. Ofrecemos jornada extendida hasta las 4:30 PM de lunes a jueves, donde se desarrollan sala de tareas, refuerzos académicos y nivelaciones.",
+    a: "Jornada regular de 7:30 AM a 2:00 PM, lunes a viernes. Ofrecemos Jornada Extendida de lunes a jueves, de 2:30 PM a 5:00 PM, con sala de tareas, nivelación, refuerzo académico y clases extracurriculares.",
   },
   {
     q: "¿Cómo es el proceso de admisión?",
@@ -30,10 +30,10 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "¿Ofrecen transporte escolar?",
-    a: "No contamos con transporte escolar propio. El centro está ubicado en Calle D #4, Urbanización Fernández, Santo Domingo, con fácil acceso desde varios sectores.",
+    a: "Sí. Contamos con transporte escolar con el mismo servicio para todas las zonas y cupos limitados por ruta. Escríbenos por WhatsApp para validar tu zona y la disponibilidad.",
   },
   {
     q: "¿Qué actividades extracurriculares tienen?",
-    a: "CELPIN Wolves (equipos deportivos), Liga Deportiva Terapéutica fundada en 2001 (2 viernes al mes en el Club San Gerónimo) y Okami Dojo (Karate, Taekwondo y Judo). Además ofrecemos clases extracurriculares de Piano, Guitarra, Canto, Baile y Teatro.",
+    a: "Como parte de la Jornada Extendida ofrecemos clases de Inglés, Piano, Guitarra, Canto y Locución. En deportes contamos con CELPIN Wolves, la Liga Deportiva Terapéutica (2 viernes al mes en el Club San Gerónimo) y Okami Dojo (Karate, Taekwondo y Judo).",
   },
 ];

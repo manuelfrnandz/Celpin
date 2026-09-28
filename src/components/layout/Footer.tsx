@@ -27,7 +27,8 @@ const NAV_LINKS = [
   { label: "Programas", href: "/programas" },
   { label: "Vida estudiantil", href: "/vida-estudiantil" },
   { label: "Admisiones", href: "/admisiones" },
-  { label: "Preguntas frecuentes", href: "/admisiones#faq" },
+  { label: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
+  { label: "Transporte escolar", href: "/admisiones#transporte" },
   { label: "Documentos", href: "/admisiones#documentos" },
 ];
 

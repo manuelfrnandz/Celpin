@@ -9,6 +9,7 @@ import { Nosotros } from "./pages/Nosotros";
 import { ProgramasPage } from "./pages/ProgramasPage";
 import { VidaEstudiantil } from "./pages/VidaEstudiantil";
 import { AdmisionesPage } from "./pages/AdmisionesPage";
+import { PreguntasFrecuentes } from "./pages/PreguntasFrecuentes";
 
 // On page change: jump to top, or to the #section when the link carries one.
 // Hash targets are retried because Instagram embeds and images reflow the page
@@ -57,6 +58,7 @@ export default function App() {
             <Route path="/programas" element={<ProgramasPage />} />
             <Route path="/vida-estudiantil" element={<VidaEstudiantil />} />
             <Route path="/admisiones" element={<AdmisionesPage />} />
+            <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

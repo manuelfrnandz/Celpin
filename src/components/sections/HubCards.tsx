@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Landmark, BookOpen, Sparkles, ClipboardCheck, ArrowRight } from "lucide-react";
+import { Landmark, BookOpen, Sparkles, ClipboardCheck, MessageCircleQuestion, ArrowRight } from "lucide-react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 const CARDS = [
@@ -15,8 +15,8 @@ const CARDS = [
     to: "/programas",
     Icon: BookOpen,
     titulo: "Programas",
-    desc: "Primaria, Secundaria y Strukturas, nuestro programa especializado.",
-    incluye: "Primaria · Secundaria · Strukturas",
+    desc: "Primaria, Secundaria, Strukturas y la Jornada Extendida con clases extracurriculares.",
+    incluye: "Niveles · Jornada Extendida · Extracurriculares",
   },
   {
     to: "/vida-estudiantil",
@@ -29,8 +29,15 @@ const CARDS = [
     to: "/admisiones",
     Icon: ClipboardCheck,
     titulo: "Admisiones",
-    desc: "Cómo inscribir a tu hijo, requisitos, documentos y preguntas frecuentes.",
-    incluye: "Proceso · Preguntas · Documentos",
+    desc: "Cómo inscribir a tu hijo, el transporte escolar y los documentos de inscripción.",
+    incluye: "Proceso · Transporte · Documentos",
+  },
+  {
+    to: "/preguntas-frecuentes",
+    Icon: MessageCircleQuestion,
+    titulo: "Preguntas frecuentes",
+    desc: "Costos, horario, niveles, transporte y todo lo que las familias nos preguntan.",
+    incluye: "Respuestas directas",
   },
 ];
 
@@ -40,10 +47,11 @@ export function HubCards() {
   return (
     <section className="bg-cream py-16 xl:py-24">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5 gap-5">
           {CARDS.map(({ to, Icon, titulo, desc, incluye }, i) => (
             <motion.div
               key={to}
+              className={i < 3 ? "lg:col-span-2 xl:col-span-1" : i === 3 ? "lg:col-span-3 xl:col-span-1" : "sm:col-span-2 lg:col-span-3 xl:col-span-1"}
               initial={reduced ? {} : { opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}

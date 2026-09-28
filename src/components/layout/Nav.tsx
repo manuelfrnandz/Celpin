@@ -12,6 +12,7 @@ export const NAV_LINKS = [
   { label: "Programas", href: "/programas" },
   { label: "Vida estudiantil", href: "/vida-estudiantil" },
   { label: "Admisiones", href: "/admisiones" },
+  { label: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
 ];
 
 const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURIComponent(
