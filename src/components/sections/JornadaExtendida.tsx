@@ -19,7 +19,7 @@ function ClaseCard({ clase, wide, index }: { clase: ClaseExtra; wide?: boolean; 
       transition={{ duration: 0.4, delay: index * 0.06 }}
       className={
         wide
-          ? "bg-white rounded-2xl border border-border p-6 xl:p-8 grid lg:grid-cols-[1fr_1.2fr] gap-6 lg:gap-10"
+          ? "bg-white rounded-2xl border border-border p-6 flex flex-col gap-4 sm:col-span-2 xl:col-span-1"
           : "bg-white rounded-2xl border border-border p-6 flex flex-col gap-4"
       }
     >
@@ -30,10 +30,6 @@ function ClaseCard({ clase, wide, index }: { clase: ClaseExtra; wide?: boolean; 
           {clase.horario}
         </p>
         <p className="text-body-sm text-ink-soft">{clase.desc}</p>
-      </div>
-      <div className={wide ? "lg:border-l lg:border-border lg:pl-10 flex flex-col justify-center gap-1" : "mt-auto pt-4 border-t border-border flex flex-col gap-1"}>
-        <p className="font-body font-semibold text-body-sm text-ink">{clase.profesor}</p>
-        <p className="text-[13px] leading-snug text-ink-muted">{clase.credencial}</p>
       </div>
     </motion.div>
   );
@@ -95,13 +91,10 @@ export function JornadaExtendida() {
           <p className="text-body text-ink-soft">{JORNADA.extracurricularesIntro}</p>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <ClaseCard clase={JORNADA.ingles} wide index={0} />
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
-            {JORNADA.artes.map((clase, i) => (
-              <ClaseCard key={clase.nombre} clase={clase} index={i + 1} />
-            ))}
-          </div>
+        <div className="grid sm:grid-cols-2 xl:grid-cols-5 gap-5">
+          {[JORNADA.ingles, ...JORNADA.artes].map((clase, i) => (
+            <ClaseCard key={clase.nombre} clase={clase} index={i} wide={i === 0} />
+          ))}
         </div>
 
         {/* Cierre + CTA */}

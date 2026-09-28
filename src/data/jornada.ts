@@ -4,8 +4,6 @@ export interface ClaseExtra {
   nombre: string;
   horario: string;
   desc: string;
-  profesor: string;
-  credencial: string;
 }
 
 export const JORNADA = {
@@ -21,40 +19,27 @@ export const JORNADA = {
     nombre: "Inglés",
     horario: "Lunes, martes y jueves · 2:30 PM – 5:00 PM",
     desc: "A través de clases dinámicas y prácticas, trabajamos comprensión, conversación, pronunciación, vocabulario, lectura y escritura, promoviendo el uso del inglés en situaciones cotidianas.",
-    profesor: "María Teresa Puigbò",
-    credencial:
-      "Experiencia en la enseñanza de inglés y francés como segunda lengua a niños y adolescentes, y en tutorías y acompañamiento educativo.",
   } as ClaseExtra,
   artes: [
     {
       nombre: "Piano",
       horario: "Martes y jueves · sesiones de 1 hora",
       desc: "Desarrollo musical, coordinación, disciplina y apreciación artística, con lectura musical, teoría y práctica instrumental.",
-      profesor: "Nathalia Vásquez Lockward",
-      credencial:
-        "Certificada teóricamente por el ABRSM y egresada del Instituto de Cultura y Arte (ICA).",
     },
     {
       nombre: "Guitarra",
       horario: "Jueves · sesiones de 1 hora",
       desc: "Introducción y desarrollo de habilidades musicales a través del aprendizaje práctico del instrumento.",
-      profesor: "Emmanuel Medina Pereyra",
-      credencial: "Músico, productor musical y formador con más de 20 años de trayectoria.",
     },
     {
       nombre: "Canto",
       horario: "Jueves · sesiones de 1 hora",
       desc: "Técnica vocal, expresión artística, confianza y desarrollo de las capacidades musicales.",
-      profesor: "Katiuska Marisol Estévez Espinal",
-      credencial:
-        "Cantante y educadora artística con más de 20 años de experiencia; vocal coach en musicales.",
     },
     {
       nombre: "Locución",
       horario: "Jueves · sesiones de 1 hora",
       desc: "Dicción, expresión oral, proyección de la voz, manejo del micrófono y desenvolvimiento frente al público.",
-      profesor: "Katiuska Marisol Estévez Espinal",
-      credencial: "Licenciada en Comunicación Social y locutora.",
     },
   ] as ClaseExtra[],
   cierre:
