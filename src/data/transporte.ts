@@ -13,10 +13,10 @@ export const TRANSPORTE = {
     "Transporte escolar seguro, organizado y confiable para todos nuestros estudiantes, sin importar su zona de cobertura. Mismo servicio en todas las zonas.",
   cupos: "Cupos limitados por ruta",
   pasos: [
-    { titulo: "Solicita", desc: "Completa el formulario de inscripción." },
-    { titulo: "Confirma", desc: "Validamos la zona, disponibilidad y tarifa." },
-    { titulo: "Asegura", desc: "Recibe la confirmación de tu cupo." },
-    { titulo: "Listo", desc: "Tu hijo viaja con el respaldo de CELPIN." },
+    { titulo: "Solicita", corto: "Solicitas el servicio", desc: "Completa el formulario de inscripción." },
+    { titulo: "Confirma", corto: "Validamos tu zona", desc: "Validamos la zona, disponibilidad y tarifa." },
+    { titulo: "Asegura", corto: "Confirmamos tu cupo", desc: "Recibe la confirmación de tu cupo." },
+    { titulo: "Listo", corto: "Tu hijo viaja con CELPIN", desc: "Tu hijo viaja con el respaldo de CELPIN." },
   ],
   foto: "/images/transporte/estudiante-transporte.jpg",
 } as const;

@@ -15,8 +15,8 @@ const CARDS = [
     to: "/programas",
     Icon: BookOpen,
     titulo: "Programas",
-    desc: "Primaria, Secundaria, Strukturas y la Jornada Extendida con clases extracurriculares.",
-    incluye: "Niveles · Jornada Extendida · Extracurriculares",
+    desc: "Primaria, Secundaria, Strukturas, la Jornada Extendida y el transporte escolar.",
+    incluye: "Niveles · Jornada Extendida · Transporte",
   },
   {
     to: "/vida-estudiantil",
@@ -29,8 +29,8 @@ const CARDS = [
     to: "/admisiones",
     Icon: ClipboardCheck,
     titulo: "Admisiones",
-    desc: "Cómo inscribir a tu hijo, el transporte escolar y los documentos de inscripción.",
-    incluye: "Proceso · Transporte · Documentos",
+    desc: "Los pasos para inscribir a tu hijo y los documentos de inscripción.",
+    incluye: "Proceso · Documentos",
   },
   {
     to: "/preguntas-frecuentes",
