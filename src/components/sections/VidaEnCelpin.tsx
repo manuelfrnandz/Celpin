@@ -61,7 +61,7 @@ export function VidaEnCelpin() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="03" label="Vida estudiantil" className="mb-4" />
+          <Eyebrow label="Vida estudiantil" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Una comunidad que{" "}
             <em className="font-serif italic">crece contigo.</em>
