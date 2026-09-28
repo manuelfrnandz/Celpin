@@ -9,7 +9,7 @@ export const PASOS: Paso[] = [
   {
     num: "01",
     titulo: "Solicitud de información",
-    desc: "Escríbenos por WhatsApp o completa el formulario. Te enviamos el dossier 2026–2027 con toda la información del programa.",
+    desc: "Escríbenos por WhatsApp y te enviamos el dossier 2026–2027 con toda la información del programa.",
     duracion: "5 min",
   },
   {
