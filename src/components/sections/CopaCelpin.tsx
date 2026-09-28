@@ -12,7 +12,7 @@ export function CopaCelpin() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="05" label="Copa CELPIN" className="mb-4" />
+          <Eyebrow label="Copa CELPIN" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Cuatro facciones,{" "}
             <em className="font-serif italic text-green">una comunidad.</em>

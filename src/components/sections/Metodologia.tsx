@@ -1,21 +1,15 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { PILARES } from "../../data/pilares";
 import { SITE } from "../../data/site";
 import { Eyebrow } from "../ui/Eyebrow";
 import { PillarCard } from "../cards/PillarCard";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
+import { useInstagramEmbeds } from "../../hooks/useInstagramEmbeds";
 
 export function Metodologia() {
   const reduced = useReducedMotion();
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
+  useInstagramEmbeds();
 
   return (
     <section id="metodologia" className="bg-cream py-20 xl:py-32 border-t border-border">
@@ -23,7 +17,7 @@ export function Metodologia() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="03" label="Metodología" className="mb-4" />
+          <Eyebrow number="01" label="Nosotros" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Enseñamos diferente porque los niños{" "}
             <em className="font-serif italic">aprenden diferente.</em>

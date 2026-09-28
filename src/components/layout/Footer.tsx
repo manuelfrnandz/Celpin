@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 function IgIcon() {
@@ -21,13 +22,13 @@ function YtIcon() {
 import { SITE } from "../../data/site";
 
 const NAV_LINKS = [
-  { label: "Programas", href: "#programas" },
-  { label: "Metodología", href: "#metodologia" },
-  { label: "Deportes", href: "#deportes" },
-  { label: "Vida en CELPIN", href: "#vida" },
-  { label: "Testimonios", href: "#testimonios" },
-  { label: "Admisiones", href: "#admisiones" },
-  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "Inicio", href: "/" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Programas", href: "/programas" },
+  { label: "Vida estudiantil", href: "/vida-estudiantil" },
+  { label: "Admisiones", href: "/admisiones" },
+  { label: "Preguntas frecuentes", href: "/admisiones#faq" },
+  { label: "Documentos", href: "/admisiones#documentos" },
 ];
 
 const NIVELES = ["Primaria", "Secundaria", "Strukturas"];
@@ -105,12 +106,12 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-body text-cream/60 hover:text-cream transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -124,12 +125,12 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {NIVELES.map((n) => (
                 <li key={n}>
-                  <a
-                    href="#programas"
+                  <Link
+                    to="/programas"
                     className="text-body text-cream/60 hover:text-cream transition-colors"
                   >
                     {n}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

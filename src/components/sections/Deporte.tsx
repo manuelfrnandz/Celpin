@@ -1,19 +1,13 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { DEPORTE } from "../../data/deporte";
 import { Eyebrow } from "../ui/Eyebrow";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
+import { useInstagramEmbeds } from "../../hooks/useInstagramEmbeds";
 
 export function Deporte() {
   const reduced = useReducedMotion();
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
+  useInstagramEmbeds();
 
   return (
     <section id="deportes" className="bg-ink py-20 xl:py-32">
@@ -21,7 +15,7 @@ export function Deporte() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="04" label="Deportes" onDark className="mb-4" />
+          <Eyebrow label="Deportes" onDark className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-cream mb-4">
             El deporte como{" "}
             <em className="font-serif italic text-green">aula.</em>

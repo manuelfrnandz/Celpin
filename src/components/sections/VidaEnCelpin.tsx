@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Eyebrow } from "../ui/Eyebrow";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
+import { useInstagramEmbeds } from "../../hooks/useInstagramEmbeds";
 
 // Fotos en /public/images/vida/ — rotan entre los 5 slots cada 4s
 const FOTOS = [
@@ -46,13 +47,7 @@ export function VidaEnCelpin() {
   const reduced = useReducedMotion();
   const [offset, setOffset] = useState(0);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
+  useInstagramEmbeds();
 
   useEffect(() => {
     if (reduced) return;
@@ -66,7 +61,7 @@ export function VidaEnCelpin() {
 
         {/* Header */}
         <div className="max-w-2xl mb-12 xl:mb-16">
-          <Eyebrow number="06" label="Vida en CELPIN" className="mb-4" />
+          <Eyebrow number="03" label="Vida estudiantil" className="mb-4" />
           <h2 className="font-display font-semibold text-h2-mobile xl:text-h2-section text-ink mb-4">
             Una comunidad que{" "}
             <em className="font-serif italic">crece contigo.</em>

@@ -1,69 +1,68 @@
 import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import "./index.css";
 import { Nav } from "./components/layout/Nav";
 import { Footer } from "./components/layout/Footer";
 import { StickyCTA } from "./components/layout/StickyCTA";
-import { Hero } from "./components/sections/Hero";
-import { TrustStrip } from "./components/sections/TrustStrip";
-import { Programas } from "./components/sections/Programas";
-import { Metodologia } from "./components/sections/Metodologia";
-import { Deporte } from "./components/sections/Deporte";
-import { CopaCelpin } from "./components/sections/CopaCelpin";
-import { VidaEnCelpin } from "./components/sections/VidaEnCelpin";
-import { Testimonios } from "./components/sections/Testimonios";
-import { Admisiones } from "./components/sections/Admisiones";
-import { FAQ } from "./components/sections/FAQ";
-import { Documentos } from "./components/sections/Documentos";
+import { Home } from "./pages/Home";
+import { Nosotros } from "./pages/Nosotros";
+import { ProgramasPage } from "./pages/ProgramasPage";
+import { VidaEstudiantil } from "./pages/VidaEstudiantil";
+import { AdmisionesPage } from "./pages/AdmisionesPage";
 
-export default function App() {
-  // Scroll to hash after React mounts. This SPA has heavy async content —
-  // Instagram embeds in Deporte and Vida, images throughout — that reflow the
-  // page as they load. A single scroll lands too high because sections below
-  // haven't been pushed down yet. So we retry across the embed load window
-  // (up to ~4s) and stop as soon as the target position stabilizes.
+// On page change: jump to top, or to the #section when the link carries one.
+// Hash targets are retried because Instagram embeds and images reflow the page
+// for a few seconds after load; stop once the target position stabilizes.
+function ScrollManager() {
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    if (!window.location.hash) return;
-    const id = window.location.hash.slice(1);
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+      return;
+    }
+    const id = decodeURIComponent(hash.slice(1));
     let lastY = -1;
     let stableHits = 0;
     const scrollToHash = () => {
       const el = document.getElementById(id);
       if (!el) return;
-      const nav = document.querySelector("header");
-      const navH = nav?.getBoundingClientRect().height ?? 72;
+      const navH = document.querySelector("header")?.getBoundingClientRect().height ?? 72;
       const y = Math.max(0, el.getBoundingClientRect().top + window.scrollY - navH - 12);
       if (Math.abs(y - lastY) < 4) {
-        stableHits++;
-        if (stableHits >= 2) return; // page stabilized, don't rescroll
+        if (++stableHits >= 2) return;
       } else {
         stableHits = 0;
       }
       lastY = y;
       window.scrollTo({ top: y, behavior: "smooth" });
     };
-    const delays = [150, 500, 1200, 2200, 3500];
-    const timers = delays.map((d) => setTimeout(scrollToHash, d));
+    const timers = [50, 400, 1200, 2200, 3500].map((d) => setTimeout(scrollToHash, d));
     return () => timers.forEach(clearTimeout);
-  }, []);
+  }, [pathname, hash]);
 
+  return null;
+}
+
+export default function App() {
   return (
-    <div className="min-h-screen bg-cream text-ink font-body">
-      <Nav />
-      <main className="main-content xl:pb-0">
-        <Hero />
-        <TrustStrip />
-        <Programas />
-        <Metodologia />
-        <Deporte />
-        <CopaCelpin />
-        <VidaEnCelpin />
-        <Testimonios />
-        <Admisiones />
-        <FAQ />
-        <Documentos />
-      </main>
-      <Footer />
-      <StickyCTA />
-    </div>
+    <BrowserRouter>
+      <ScrollManager />
+      <div className="min-h-screen bg-cream text-ink font-body">
+        <Nav />
+        <main className="main-content xl:pb-0">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/programas" element={<ProgramasPage />} />
+            <Route path="/vida-estudiantil" element={<VidaEstudiantil />} />
+            <Route path="/admisiones" element={<AdmisionesPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+        <StickyCTA />
+      </div>
+    </BrowserRouter>
   );
 }

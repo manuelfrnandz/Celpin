@@ -135,7 +135,7 @@ export function Hero() {
               <Button variant="primary" size="lg" href={WA_LINK} external>
                 Agenda una visita
               </Button>
-              <Button variant="secondary" size="lg" href="#programas">
+              <Button variant="secondary" size="lg" href="/programas">
                 Conoce los programas
               </Button>
             </motion.div>

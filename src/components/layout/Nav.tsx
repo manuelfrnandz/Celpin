@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { SITE } from "../../data/site";
@@ -6,13 +7,11 @@ import { useScrolled } from "../../hooks/useScrolled";
 import { Button } from "../ui/Button";
 import { cn } from "../../lib/cn";
 
-const NAV_LINKS = [
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Programas", href: "#programas" },
-  { label: "Metodología", href: "#metodologia" },
-  { label: "Deportes", href: "#deportes" },
-  { label: "Admisiones", href: "#admisiones" },
-  { label: "Documentos", href: "#documentos" },
+export const NAV_LINKS = [
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Programas", href: "/programas" },
+  { label: "Vida estudiantil", href: "/vida-estudiantil" },
+  { label: "Admisiones", href: "/admisiones" },
 ];
 
 const WA_LINK = `https://wa.me/${SITE.contacto.whatsapp}?text=${encodeURIComponent(
@@ -35,7 +34,7 @@ export function Nav() {
       >
         <div className="max-w-landing mx-auto px-5 xl:px-14 h-[72px] flex items-center justify-between gap-8">
           {/* Logo — crop removes "Centro Educativo Los Pinos Nuevos" subtitle */}
-          <a href="#" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0" aria-label="CELPIN — Inicio">
             <div className="h-[52px] overflow-hidden">
               <img
                 src="/images/celpin-logo-transparent.png"
@@ -43,24 +42,31 @@ export function Nav() {
                 className="h-[76px] w-auto"
               />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
+              <NavLink
                 key={link.href}
-                href={link.href}
-                className="text-body-sm font-body font-medium text-ink-soft hover:text-ink transition-colors duration-150"
+                to={link.href}
+                className={({ isActive }) =>
+                  cn(
+                    "relative text-body-sm font-body font-medium transition-colors duration-150 py-1",
+                    isActive
+                      ? "text-ink after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:rounded-full after:bg-green"
+                      : "text-ink-soft hover:text-ink"
+                  )
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
 
-          {/* Desktop CTAs */}
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <Button variant="secondary" size="sm" href="#admisiones">
+            <Button variant="secondary" size="sm" href={WA_LINK} external>
               Agenda una visita
             </Button>
           </div>
@@ -100,13 +106,13 @@ export function Nav() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-border flex-shrink-0">
-                <div className="h-[44px] overflow-hidden">
+                <Link to="/" onClick={() => setOpen(false)} className="h-[44px] overflow-hidden" aria-label="CELPIN — Inicio">
                   <img
                     src="/images/celpin-logo-transparent.png"
                     alt={SITE.siglas}
                     className="h-[64px] w-auto"
                   />
-                </div>
+                </Link>
                 <button
                   onClick={() => setOpen(false)}
                   className="p-2 -mr-2 text-ink-soft hover:text-ink"
@@ -119,30 +125,30 @@ export function Nav() {
               {/* Links */}
               <nav className="flex-1 flex flex-col px-6 pt-6 overflow-y-auto">
                 {NAV_LINKS.map((link, i) => (
-                  <motion.a
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
                     initial={{ opacity: 0, x: 16 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.04 + i * 0.05 }}
-                    className="py-4 text-h3-card font-display font-medium text-ink border-b border-border/50 hover:text-green-dark transition-colors"
                   >
-                    {link.label}
-                  </motion.a>
+                    <NavLink
+                      to={link.href}
+                      onClick={() => setOpen(false)}
+                      className={({ isActive }) =>
+                        cn(
+                          "block py-4 text-h3-card font-display font-medium border-b border-border/50 hover:text-green-dark transition-colors",
+                          isActive ? "text-green-dark" : "text-ink"
+                        )
+                      }
+                    >
+                      {link.label}
+                    </NavLink>
+                  </motion.div>
                 ))}
               </nav>
 
               {/* Bottom CTAs */}
               <div className="px-6 pb-8 pt-4 flex flex-col gap-3 flex-shrink-0 border-t border-border">
-                <Button
-                  variant="primary"
-                  href="#admisiones"
-                  onClick={() => setOpen(false)}
-                  className="w-full justify-center"
-                >
-                  Agenda una visita
-                </Button>
                 <Button
                   variant="whatsapp"
                   href={WA_LINK}
@@ -150,7 +156,7 @@ export function Nav() {
                   className="w-full justify-center"
                 >
                   <MessageCircle size={16} />
-                  WhatsApp
+                  Agenda una visita
                 </Button>
               </div>
             </motion.div>

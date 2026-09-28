@@ -1,4 +1,5 @@
 import { type ReactNode, type MouseEvent } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/cn";
 
 type Variant = "primary" | "primary-green" | "secondary" | "whatsapp";
@@ -51,6 +52,14 @@ export function Button({
     disabled && "opacity-50 cursor-not-allowed pointer-events-none",
     className
   );
+
+  if (href && href.startsWith("/") && !external) {
+    return (
+      <Link to={href} className={classes} onClick={onClick}>
+        {children}
+      </Link>
+    );
+  }
 
   if (href) {
     return (
