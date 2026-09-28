@@ -102,7 +102,7 @@ export function Nav() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 300 }}
-              className="fixed right-0 top-0 bottom-0 z-[70] w-[min(320px,90vw)] bg-cream flex flex-col"
+              className="fixed right-0 top-0 bottom-0 z-[70] w-[min(320px,90vw)] bg-cream-solid flex flex-col"
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-border flex-shrink-0">
