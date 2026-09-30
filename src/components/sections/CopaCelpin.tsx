@@ -7,7 +7,7 @@ export function CopaCelpin() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="copa-celpin" className="bg-cream py-20 xl:py-32 border-t border-border">
+    <section id="copa-celpin" className="bg-cream py-20 xl:py-32">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}

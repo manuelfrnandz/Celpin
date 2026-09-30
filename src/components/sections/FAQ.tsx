@@ -14,7 +14,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-cream py-20 xl:py-32 border-t border-border">
+    <section id="faq" className="bg-cream py-20 xl:py-32">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
         <div className="max-w-3xl mx-auto">
 

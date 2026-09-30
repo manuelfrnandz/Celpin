@@ -6,7 +6,7 @@ export function Documentos() {
   if (DOCUMENTOS.length === 0) return null;
 
   return (
-    <section id="documentos" className="bg-cream py-20 xl:py-28 border-t border-border">
+    <section id="documentos" className="bg-cream py-20 xl:py-28">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}

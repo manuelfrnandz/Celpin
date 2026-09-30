@@ -35,7 +35,7 @@ function PasoCard({ paso, index }: { paso: Paso; index: number }) {
   );
 }
 
-function InfoCard() {
+export function InfoCard({ showPill = true }: { showPill?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,9 +46,11 @@ function InfoCard() {
     >
       <div className="flex flex-col gap-6">
       <div>
-        <Pill dot className="mb-4">
-          {SITE.admisiones.texto}
-        </Pill>
+        {showPill && (
+          <Pill dot className="mb-4">
+            {SITE.admisiones.texto}
+          </Pill>
+        )}
         <h3 className="font-display font-semibold text-h3-card text-cream mb-2">
           ¿Listo para conocernos?
         </h3>
@@ -94,7 +96,7 @@ function InfoCard() {
 
 export function Admisiones() {
   return (
-    <section id="admisiones" className="bg-cream py-20 xl:py-32 border-t border-border">
+    <section id="admisiones" className="bg-cream py-20 xl:py-32">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}

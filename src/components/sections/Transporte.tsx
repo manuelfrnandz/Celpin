@@ -15,7 +15,7 @@ export function Transporte() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="transporte" className="bg-ink py-16 xl:py-20">
+    <section id="transporte" className="bg-ink py-16 xl:py-20 mb-12 xl:mb-24">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
         <motion.div
           initial={reduced ? {} : { opacity: 0, y: 16 }}

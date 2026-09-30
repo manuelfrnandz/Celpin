@@ -106,3 +106,15 @@
     }
   }
 }
+
+/* One continuous pine pattern for the whole page: the app wrapper paints it,
+   nested cream sections stay transparent so it never restarts at a seam. */
+.bg-cream .bg-cream {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* Two cream sections in a row share one gap instead of doubling it. */
+.bg-cream + .bg-cream {
+  padding-top: 0;
+}

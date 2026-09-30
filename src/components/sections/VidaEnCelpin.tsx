@@ -56,7 +56,7 @@ export function VidaEnCelpin() {
   }, [reduced]);
 
   return (
-    <section id="vida" className="bg-cream py-20 xl:py-32 border-t border-border">
+    <section id="vida" className="bg-cream py-20 xl:py-32">
       <div className="max-w-landing mx-auto px-5 xl:px-14">
 
         {/* Header */}
